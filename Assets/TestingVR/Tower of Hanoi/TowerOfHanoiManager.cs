@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace TestingVR.Tower_of_Hanoi
@@ -20,13 +21,19 @@ namespace TestingVR.Tower_of_Hanoi
         
         void Start()
         {
+            SpawnSlices();  
+        }
+
+        private async Task SpawnSlices()
+        {
             for (var i = 0; i != sliceCount; i++)
             {
                 var slice = Instantiate(_slicePrefab, transform);
                 var expansion = Mathf.Lerp(MAX_SLICE_EXPANSION, MIN_SLICE_EXPANSION, i/(sliceCount - 1f));
                 slice.transform.localScale = new Vector3(expansion, SLICE_HEIGHT, expansion);
                 _rod1.StackSlice(slice);
-            }   
+                await Task.Delay(500);
+            }  
         }
     }
 }
