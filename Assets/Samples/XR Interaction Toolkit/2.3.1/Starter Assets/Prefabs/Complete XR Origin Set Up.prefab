@@ -220,6 +220,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4134505312059479865}
     m_Modifications:
+    - target: {fileID: 1767192437, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Name
       value: XR Origin
@@ -267,6 +271,14 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232745470614056083, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_TrackingStateInput.m_Action.m_Id
+      value: 9f178190-dd4f-4e51-a713-d1e812ec42f4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232745470614056083, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_TrackingStateInput.m_Action.m_Name
+      value: Tracking State Input
       objectReference: {fileID: 0}
     - target: {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Center.y
