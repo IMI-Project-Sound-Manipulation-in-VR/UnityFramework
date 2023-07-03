@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "com.htw.soundinstancemanager": {
-      "version": "file:C:/Users/Russell/SoundManipulation/Packages/SoundInstanceManager",
+      "version": "file:SoundInstanceManager",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {}
     },
     "com.unity.collab-proxy": {

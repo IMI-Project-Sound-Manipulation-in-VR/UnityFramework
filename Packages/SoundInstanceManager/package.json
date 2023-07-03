@@ -1,0 +1,13 @@
+{
+  "name": "com.htw.soundinstancemanager",
+  "version": "1.2.0",
+  "displayName": "Sound Instance Manager",
+  "description": "Sound Instance Manager IMI Master Showtime",
+  "keywords": [
+    "sound"
+  ],
+  "author": {
+    "name": "Ruslan Novikov",
+    "email": "Ruslan.Novikov@Student.HTW-Berlin.de"
+  }
+}
