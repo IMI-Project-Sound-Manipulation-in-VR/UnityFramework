@@ -169,16 +169,17 @@ public class SoundInstanceEditor : MonoBehaviour
 
     public void UpdateAdditionalParameters(){
 
-        foreach(FMODParameterDescription parameterDescription in parameterDescriptions)
-        {
-            eventInstance.setParameterByName(parameterDescription.ParameterName, parameterDescription.CurrentValue);
+        if(parameterDescriptions != null){
+            foreach(FMODParameterDescription parameterDescription in parameterDescriptions)
+            {
+                eventInstance.setParameterByName(parameterDescription.ParameterName, parameterDescription.CurrentValue);
+            }
         }
-
     }
 
     public void DrawInspectorGUI()
     {
-        if (eventReference.Path.Length > 0)
+        if (!eventReference.IsNull)
         {
             MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
             showGUI = EditorGUILayout.Foldout(showGUI, eventReference.Path.Length > 0 ? eventReference.Path.Substring("event:/".Length) : "");
