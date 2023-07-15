@@ -21,7 +21,7 @@ public class SoundTest : MonoBehaviour
     {
         if(isColliding) {
             Vector3 velocity = rb.velocity;
-            marbleRollSpeed = velocity.magnitude;
+            marbleRollSpeed = velocity.magnitude * 5;
         }
     }
 

@@ -89,7 +89,7 @@ public class SoundInstanceEditor : MonoBehaviour
         if(scriptType != null){
             foreach(FMODParameterDescription paramDescription in parameterDescriptions)
             {
-                FieldInfo field = scriptType.GetField(paramDescription.ParameterName, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.IgnoreCase);
+                FieldInfo field = scriptType.GetField(paramDescription.ParameterName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.IgnoreCase);
                 if(field == null) continue;
                 if(!field.FieldType.IsEnum) {
                     paramDescription.CurrentValue = (float) field.GetValue(script);
