@@ -222,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3957244421432699537}
   m_Layer: 0
-  m_Name: MazePrefab
+  m_Name: Maze3DObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
