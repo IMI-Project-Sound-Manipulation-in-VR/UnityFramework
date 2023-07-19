@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 6776627511870757575}
   - component: {fileID: 9109129234564188856}
   - component: {fileID: 6776627511870757573}
+  - component: {fileID: 2017748521}
+  - component: {fileID: 2017748522}
   m_Layer: 0
   m_Name: Marble
   m_TagString: Untagged
@@ -264,7 +266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec00beae7ad3f7346ad6483ab948256d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setActiveObjects: []
+  setActiveObjects:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &6776627511870757573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,3 +281,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83bd1142e0672e4e8e849bcd6563483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2017748521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776627511870757629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168d61edbe9ac0b49a0ff2855773593d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  innerMaze: {fileID: 0}
+  isColliding: 0
+  marbleRollSpeed: 0
+--- !u!114 &2017748522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776627511870757629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9e55031402d5e4ab02141adcc7d447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 2017748521}
+  eventReference:
+    Guid:
+      Data1: 1518175522
+      Data2: 1220172992
+      Data3: -1459838052
+      Data4: -472731183
+    Path: event:/Marble/MarbleOnWood

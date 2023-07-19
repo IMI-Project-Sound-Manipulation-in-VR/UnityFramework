@@ -491,11 +491,6 @@ Transform:
   m_Father: {fileID: 164331507}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &304436086 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6776627511870757629, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
-  m_PrefabInstance: {fileID: 6776627510667279586}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &406269803
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +789,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2004382641}
     m_Modifications:
+    - target: {fileID: 2017748521, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
+      propertyPath: innerMaze
+      value: 
+      objectReference: {fileID: 1061312094098805965}
     - target: {fileID: 6776627511870757570, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -872,6 +871,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2004382641}
     m_Modifications:
+    - target: {fileID: 2017748521, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
+      propertyPath: innerMaze
+      value: 
+      objectReference: {fileID: 1061312094098805965}
     - target: {fileID: 6776627511870757570, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1725,41 +1728,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6776627511870757570, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
   m_PrefabInstance: {fileID: 6776627510667279586}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2017748521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304436086}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168d61edbe9ac0b49a0ff2855773593d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  innerMaze: {fileID: 1061312094098805965}
-  isColliding: 0
-  marbleRollSpeed: 0
---- !u!114 &2017748522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304436086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb9e55031402d5e4ab02141adcc7d447, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  script: {fileID: 0}
-  eventReference:
-    Guid:
-      Data1: 1518175522
-      Data2: 1220172992
-      Data3: -1459838052
-      Data4: -472731183
-    Path: event:/Marble/MarbleOnWood
 --- !u!1 &2117348605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,6 +1911,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2004382641}
     m_Modifications:
+    - target: {fileID: 2017748521, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
+      propertyPath: innerMaze
+      value: 
+      objectReference: {fileID: 1061312094098805965}
     - target: {fileID: 6776627511870757570, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1994,10 +1966,6 @@ PrefabInstance:
     - target: {fileID: 6776627511870757629, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
       propertyPath: m_Name
       value: Marble
-      objectReference: {fileID: 0}
-    - target: {fileID: 9109129234564188856, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
-      propertyPath: setActiveObjects.Array.size
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9109129234564188856, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
       propertyPath: setActiveObjects.Array.data[0]
