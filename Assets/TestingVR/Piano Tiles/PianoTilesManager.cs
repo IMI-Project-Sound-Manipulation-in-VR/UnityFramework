@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 using Random = UnityEngine.Random;
 
@@ -26,6 +27,7 @@ public class PianoTilesManager : MonoBehaviour
     [SerializeField] private int restartDelay = 1;
     
     [SerializeField] private GameObject key;
+    [SerializeField] private Text levelText;
     [SerializeField] private List<Transform> spawnPoints;
 
     private bool gameOver;
@@ -65,6 +67,7 @@ public class PianoTilesManager : MonoBehaviour
     {
         level -= Convert.ToInt32(resetBy / speedIncreasedBy);
         level = Math.Max(0, level);
+        UpdateLevel();
         
         speed -= resetBy;
         speed = Math.Max(minSpeed, speed);
@@ -106,6 +109,8 @@ public class PianoTilesManager : MonoBehaviour
         while (!gameOver && score > 3)
         {
             level++;
+            UpdateLevel();
+            
             delay = Random.Range(currMinDelay, currMaxDelay);
 
             var spawnPos = Random.Range(0, spawnPoints.Count);
@@ -147,5 +152,10 @@ public class PianoTilesManager : MonoBehaviour
             keyBehavior.SetSpeed(0);
             keyBehavior.SetSound(i);
         }
+    }
+
+    private void UpdateLevel()
+    {
+        levelText.text = level.ToString();
     }
 }

@@ -36,12 +36,11 @@ public class KeyBehavior : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, target), speed * Time.deltaTime);
+        if(speed != 0)
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, target), speed * Time.deltaTime);
 
         if (transform.position.z < -0.5 && !failedToTap)
         {
-            Debug.Log(transform.position);
-            Debug.Log("out: " + failedToTap);
             FailedToTap();
         }
     }
@@ -74,7 +73,6 @@ public class KeyBehavior : MonoBehaviour
     private void FailedToTap()
     {
         failedToTap = true;
-        Debug.Log("in: " + failedToTap);
         audioSource.PlayOneShot(failSound);
         animator.SetBool("failed", true);
         pianoTilesManager.FailedTap();

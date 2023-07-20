@@ -188,7 +188,7 @@ MonoBehaviour:
   m_ReturnToInitialPosition: 1
   m_ApplyIfChildIsTarget: 1
   m_ClampToMaxDistance: 1
-  m_MaxDistance: 0.045
+  m_MaxDistance: 0.2
 --- !u!1 &2286665992855544600
 GameObject:
   m_ObjectHideFlags: 0
