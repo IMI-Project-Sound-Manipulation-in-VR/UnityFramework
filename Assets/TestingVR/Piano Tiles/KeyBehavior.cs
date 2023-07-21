@@ -37,9 +37,9 @@ public class KeyBehavior : MonoBehaviour
     private void Update()
     {
         if(speed != 0)
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, target), speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(target, transform.position.y, transform.position.z), speed * Time.deltaTime);
 
-        if (transform.position.z < -0.5 && !failedToTap)
+        if (transform.position.x < -0.5 && !failedToTap)
         {
             FailedToTap();
         }

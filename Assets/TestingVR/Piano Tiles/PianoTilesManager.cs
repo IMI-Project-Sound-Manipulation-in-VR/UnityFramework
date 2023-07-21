@@ -92,6 +92,7 @@ public class PianoTilesManager : MonoBehaviour
         gameOver = true;
         gameStarted = false;
         playTime = 0;
+        level = 0;
 
         var keys = GameObject.FindGameObjectsWithTag("Key");
         foreach (var key in keys)
@@ -116,7 +117,7 @@ public class PianoTilesManager : MonoBehaviour
             var spawnPos = Random.Range(0, spawnPoints.Count);
             var randomSpawnPoint = spawnPoints[spawnPos];
 
-            var keyObject = Instantiate(key, randomSpawnPoint.position, Quaternion.identity);
+            var keyObject = Instantiate(key, randomSpawnPoint.position, randomSpawnPoint.rotation);
             var keyBehavior = keyObject.GetComponent<KeyBehavior>();
             keyBehavior.SetSpeed(speed);
             keyBehavior.SetSound(spawnPos);
