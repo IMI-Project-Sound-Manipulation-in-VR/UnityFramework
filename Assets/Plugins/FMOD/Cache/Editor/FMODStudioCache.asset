@@ -984,7 +984,7 @@ MonoBehaviour:
   Path: Sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638255328629259441
+  lastModified: 638255373603780640
   FileSizes:
   - Name: Desktop
     Value: 4174
@@ -1236,7 +1236,7 @@ MonoBehaviour:
   Path: Sounds/Build/Desktop/Dialogue_CN.bank
   Name: Dialogue_CN
   StudioPath: bank:/Dialogue_CN
-  lastModified: 638255328629129787
+  lastModified: 638255373603750636
   FileSizes:
   - Name: Desktop
     Value: 52416
@@ -1439,7 +1439,7 @@ MonoBehaviour:
   Path: Sounds/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638255328636342703
+  lastModified: 638255373605598268
   FileSizes:
   - Name: Desktop
     Value: 21779168
@@ -1459,7 +1459,7 @@ MonoBehaviour:
   Path: Sounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638255328629249464
+  lastModified: 638255373603780640
   FileSizes:
   - Name: Desktop
     Value: 15592
@@ -1657,7 +1657,7 @@ MonoBehaviour:
   - {fileID: -1380848566171666331}
   StringsBanks:
   - {fileID: -3384210737799645524}
-  cacheTime: 638255328636452417
+  cacheTime: 638255373605628266
   cacheVersion: 131605
 --- !u!114 &208139426392427869
 MonoBehaviour:
@@ -2029,7 +2029,7 @@ MonoBehaviour:
   Path: Sounds/Build/Desktop/Dialogue_JP.bank
   Name: Dialogue_JP
   StudioPath: bank:/Dialogue_JP
-  lastModified: 638255328629249464
+  lastModified: 638255373603770635
   FileSizes:
   - Name: Desktop
     Value: 66560
@@ -2207,7 +2207,7 @@ MonoBehaviour:
   Path: Sounds/Build/Desktop/Vehicles.bank
   Name: Vehicles
   StudioPath: bank:/Vehicles
-  lastModified: 638255328636452417
+  lastModified: 638255373605628266
   FileSizes:
   - Name: Desktop
     Value: 222464
@@ -2584,7 +2584,7 @@ MonoBehaviour:
   Path: Sounds/Build/Desktop/VO.bank
   Name: VO
   StudioPath: bank:/VO
-  lastModified: 638255328636362644
+  lastModified: 638255373605608273
   FileSizes:
   - Name: Desktop
     Value: 38624
@@ -2738,7 +2738,7 @@ MonoBehaviour:
   Path: Sounds/Build/Desktop/Dialogue_EN.bank
   Name: Dialogue_EN
   StudioPath: bank:/Dialogue_EN
-  lastModified: 638255328629229525
+  lastModified: 638255373603760651
   FileSizes:
   - Name: Desktop
     Value: 61120
@@ -3157,7 +3157,7 @@ MonoBehaviour:
   Path: Sounds/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638255328632113433
+  lastModified: 638255373604460235
   FileSizes:
   - Name: Desktop
     Value: 10457088
