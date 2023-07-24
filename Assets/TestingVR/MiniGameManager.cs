@@ -20,15 +20,17 @@ public class MiniGameManager : MonoBehaviour
     
     private MiniGame _currentMiniGame;
 
-    private PianoTilesManager _pianoTilesManager;
     private TowerOfHanoiManager _towerOfHanoiManager;
+    private MazeGameManager _mazeGameManager;
+    private PianoTilesManager _pianoTilesManager;
         
     // Start is called before the first frame update
     private void Start()
     {
-        _pianoTilesManager = pianoTiles.GetComponent<PianoTilesManager>();
         _towerOfHanoiManager = towerOfHanoi.GetComponent<TowerOfHanoiManager>();
-        
+        _mazeGameManager = mazeGame.GetComponent<MazeGameManager>();
+        _pianoTilesManager = pianoTiles.GetComponent<PianoTilesManager>();
+
         switch (startMiniGame)
         {
             case MiniGame.TowerOfHanoi: EnableTowerOfHanoi(); break;
@@ -87,6 +89,8 @@ public class MiniGameManager : MonoBehaviour
         towerOfHanoi.SetActive(false);
         mazeGame.SetActive(true);
         pianoTiles.SetActive(false);
+        
+        _mazeGameManager.ResetGame();
     }
 
     private void EnablePianoTiles()
