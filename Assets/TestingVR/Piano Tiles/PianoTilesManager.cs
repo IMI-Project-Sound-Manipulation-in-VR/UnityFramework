@@ -1,11 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using System.Threading.Tasks;
 using UnityEngine.UI;
-using UnityEngine.XR.Interaction.Toolkit;
 using Random = UnityEngine.Random;
 
 public class PianoTilesManager : MonoBehaviour
@@ -39,7 +36,7 @@ public class PianoTilesManager : MonoBehaviour
     
     private void Start()
     {
-        ResetAll();
+        ResetAll(0);
     }
 
     private void Update()
@@ -48,7 +45,7 @@ public class PianoTilesManager : MonoBehaviour
             playTime += Time.deltaTime;
 
         if (playTime >= timeLimit)
-            GameOver(true);
+            RestartGame(restartDelay);
     }
 
     public void GotTap()
@@ -56,7 +53,7 @@ public class PianoTilesManager : MonoBehaviour
         _score++;
 
         if (_score == 4)
-            StartCoroutine(SpawnKeys());
+            SpawnKeys();
     }
 
     public void FailedTap()
@@ -81,7 +78,7 @@ public class PianoTilesManager : MonoBehaviour
         }
     }
 
-    public void GameOver(bool withDelay)
+    public void RestartGame(int delay)
     {
         if(_score == 0) return;
         
@@ -92,16 +89,13 @@ public class PianoTilesManager : MonoBehaviour
         foreach (var key in keys)
         {
             key.GetComponent<KeyBehavior>().SetSpeed(0);
-            Destroy(key, restartDelay);
+            Destroy(key, delay);
         }
-        
-        if(withDelay)
-            StartCoroutine(ResetCoroutine());
-        else
-            ResetAll();
+
+        ResetAll(delay);
     }
 
-    private IEnumerator SpawnKeys()
+    private async Task SpawnKeys()
     {
         while (_score > 3)
         {
@@ -127,12 +121,14 @@ public class PianoTilesManager : MonoBehaviour
                 _currMinDelay -= speedIncreasedBy;
             }
             
-            yield return new WaitForSeconds(_delay);
+            await Task.Delay(Convert.ToInt32(_delay * 1000));
         }
     }
 
-    private void ResetAll()
+    private async Task ResetAll(int delay)
     {
+        await Task.Delay(delay);
+
         _score = 0;
         _currMaxDelay = maxDelay;
         _currMinDelay = startMinDelay;
@@ -146,13 +142,6 @@ public class PianoTilesManager : MonoBehaviour
             keyBehavior.SetSpeed(0);
             keyBehavior.SetSound(i);
         }
-    }
-    
-    private IEnumerator ResetCoroutine()
-    {
-        yield return new WaitForSeconds(restartDelay);
-
-        ResetAll();
     }
 
     private void UpdateLevel()

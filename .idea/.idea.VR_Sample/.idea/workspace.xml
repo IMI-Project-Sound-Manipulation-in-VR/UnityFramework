@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0901e3e-e881-458c-a3ce-b7e9eb56e792" name="Changes" comment="solved marble rolling sound issue">
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Zenject-ReflectionBaking.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/Signals/Zenject-Signals.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/MiniGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/MiniGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/Piano Tiles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/Piano Tiles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/PianoTilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/PianoTilesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Slice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Slice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Tower of Hanoi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Tower of Hanoi.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/TowerOfHanoiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/TowerOfHanoiManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +30,14 @@
         <entry key="$PROJECT_DIR$" value="soundmaze" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Packages/SoundInstanceManager/Scripts/Runtime/SoundInstanceEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://E:/Projekte Unity/Git/VR_Sample/Packages/SoundInstanceManager/Scripts/Runtime/SoundInstanceEditor.cs" root0="SKIP_HIGHLIGHTING" />
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/TestingVR/MiniGameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/TowerOfHanoiManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/PianoTilesManager.cs" />
+    </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,26 +48,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\raja1\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\raja1\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\raja1\\AppData\\Local\\Symbols\\src&quot;
-    ]
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.23f1\Editor\Unity.exe" />
@@ -85,7 +82,6 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -95,7 +91,6 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -117,6 +112,7 @@
       <workItem from="1688983503378" duration="660000" />
       <workItem from="1689447478457" duration="476000" />
       <workItem from="1689457869815" duration="1318000" />
+      <workItem from="1690239624966" duration="2356000" />
     </task>
     <task id="LOCAL-00001" summary="solved marble rolling sound issue">
       <option name="closed" value="true" />
@@ -145,6 +141,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="solved marble rolling sound issue" />

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TestingVR.Tower_of_Hanoi;
 using UnityEngine;
 
 public class MiniGameManager : MonoBehaviour
@@ -20,11 +21,13 @@ public class MiniGameManager : MonoBehaviour
     private MiniGame _currentMiniGame;
 
     private PianoTilesManager _pianoTilesManager;
+    private TowerOfHanoiManager _towerOfHanoiManager;
         
     // Start is called before the first frame update
     private void Start()
     {
         _pianoTilesManager = pianoTiles.GetComponent<PianoTilesManager>();
+        _towerOfHanoiManager = towerOfHanoi.GetComponent<TowerOfHanoiManager>();
         
         switch (startMiniGame)
         {
@@ -70,19 +73,17 @@ public class MiniGameManager : MonoBehaviour
     {
         _currentMiniGame = MiniGame.TowerOfHanoi;
         
-        _pianoTilesManager.GameOver(false);
-
         towerOfHanoi.SetActive(true);
         mazeGame.SetActive(false);
         pianoTiles.SetActive(false);
+        
+        _towerOfHanoiManager.SpawnSlices();
     }
 
     private void EnableMazeGame()
     {
         _currentMiniGame = MiniGame.MazeGame;
         
-        _pianoTilesManager.GameOver(false);
-
         towerOfHanoi.SetActive(false);
         mazeGame.SetActive(true);
         pianoTiles.SetActive(false);
@@ -95,6 +96,8 @@ public class MiniGameManager : MonoBehaviour
         towerOfHanoi.SetActive(false);
         mazeGame.SetActive(false);
         pianoTiles.SetActive(true);
+        
+        _pianoTilesManager.RestartGame(0);
     }
 }
 

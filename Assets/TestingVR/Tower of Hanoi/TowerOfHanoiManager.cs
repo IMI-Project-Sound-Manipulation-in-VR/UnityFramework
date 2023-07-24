@@ -23,13 +23,14 @@ namespace TestingVR.Tower_of_Hanoi
         [SerializeField] 
         private List<Color> sliceColors;
 
-        void Start()
+        public async Task SpawnSlices()
         {
-            SpawnSlices();  
-        }
-
-        private async Task SpawnSlices()
-        {
+            var slices = GameObject.FindGameObjectsWithTag("Slice");
+            foreach (var slice in slices)
+            {
+                Destroy(slice);
+            }
+            
             for (var i = 0; i != sliceCount; i++)
             {
                 var slice = Instantiate(_slicePrefab, transform);

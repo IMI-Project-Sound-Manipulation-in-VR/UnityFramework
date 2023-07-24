@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Keyboard
   - Key
+  - Slice
   layers:
   - Default
   - TransparentFX
