@@ -28,38 +28,34 @@ public class PianoTilesManager : MonoBehaviour
     
     [SerializeField] private GameObject key;
     [SerializeField] private Text levelText;
+    [SerializeField] private Transform startKeys;
     [SerializeField] private List<Transform> spawnPoints;
 
-    private bool gameOver;
-    private bool gameStarted;
-    private float speed = 1;
-    private float delay;
-    private float currMaxDelay;
-    private float currMinDelay;
-    private int score;
+    private float _speed = 1;
+    private float _delay;
+    private float _currMaxDelay;
+    private float _currMinDelay;
+    private int _score;
     
-    // Start is called before the first frame update
     private void Start()
     {
-        speed = minSpeed;
-        currMaxDelay = maxDelay;
-        currMinDelay = startMinDelay;
+        ResetAll();
     }
 
     private void Update()
     {
-        if (gameStarted)
+        if (_score > 3)
             playTime += Time.deltaTime;
 
         if (playTime >= timeLimit)
-            GameOver();
+            GameOver(true);
     }
 
     public void GotTap()
     {
-        score++;
+        _score++;
 
-        if (score == 4)
+        if (_score == 4)
             StartCoroutine(SpawnKeys());
     }
 
@@ -69,28 +65,26 @@ public class PianoTilesManager : MonoBehaviour
         level = Math.Max(0, level);
         UpdateLevel();
         
-        speed -= resetBy;
-        speed = Math.Max(minSpeed, speed);
+        _speed -= resetBy;
+        _speed = Math.Max(minSpeed, _speed);
         
-        currMaxDelay += resetBy;
-        currMaxDelay = Math.Min(maxDelay, currMaxDelay);
+        _currMaxDelay += resetBy;
+        _currMaxDelay = Math.Min(maxDelay, _currMaxDelay);
         
-        currMinDelay += resetBy;
-        currMinDelay = Math.Min(startMinDelay, currMinDelay);
+        _currMinDelay += resetBy;
+        _currMinDelay = Math.Min(startMinDelay, _currMinDelay);
 
         var keys = GameObject.FindGameObjectsWithTag("Key");
         foreach (var key in keys)
         {
-            key.GetComponent<KeyBehavior>().SetSpeed(speed);
+            key.GetComponent<KeyBehavior>().SetSpeed(_speed);
         }
     }
 
-    private void GameOver()
+    public void GameOver(bool withDelay)
     {
-        if(gameOver) return;
+        if(_score == 0) return;
         
-        gameOver = true;
-        gameStarted = false;
         playTime = 0;
         level = 0;
 
@@ -101,58 +95,64 @@ public class PianoTilesManager : MonoBehaviour
             Destroy(key, restartDelay);
         }
         
-        StartCoroutine(ResetAll());
+        if(withDelay)
+            StartCoroutine(ResetCoroutine());
+        else
+            ResetAll();
     }
 
     private IEnumerator SpawnKeys()
     {
-        gameStarted = true;
-        while (!gameOver && score > 3)
+        while (_score > 3)
         {
             level++;
             UpdateLevel();
             
-            delay = Random.Range(currMinDelay, currMaxDelay);
+            _delay = Random.Range(_currMinDelay, _currMaxDelay);
 
             var spawnPos = Random.Range(0, spawnPoints.Count);
             var randomSpawnPoint = spawnPoints[spawnPos];
 
-            var keyObject = Instantiate(key, randomSpawnPoint.position, randomSpawnPoint.rotation);
+            var keyObject = Instantiate(key, randomSpawnPoint.position, randomSpawnPoint.rotation, randomSpawnPoint);
             var keyBehavior = keyObject.GetComponent<KeyBehavior>();
-            keyBehavior.SetSpeed(speed);
+            keyBehavior.SetSpeed(_speed);
             keyBehavior.SetSound(spawnPos);
 
-            if (speed <= maxSpeed)
-                speed += speedIncreasedBy;
+            if (_speed <= maxSpeed)
+                _speed += speedIncreasedBy;
 
-            if (currMinDelay >= minDelay)
+            if (_currMinDelay >= minDelay)
             {
-                currMaxDelay -= speedIncreasedBy;
-                currMinDelay -= speedIncreasedBy;
+                _currMaxDelay -= speedIncreasedBy;
+                _currMinDelay -= speedIncreasedBy;
             }
             
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(_delay);
         }
     }
 
-    private IEnumerator ResetAll()
+    private void ResetAll()
     {
-        yield return new WaitForSeconds(restartDelay);
-
-        score = 0;
-        gameOver = false;
-        currMaxDelay = maxDelay;
-        currMinDelay = startMinDelay;
-        speed = minSpeed;
+        _score = 0;
+        _currMaxDelay = maxDelay;
+        _currMinDelay = startMinDelay;
+        _speed = minSpeed;
 
         for (var i = 0; i < spawnPoints.Count; i++)
         {
-            var startSpawnPoint = new Vector3(spawnPoints[i].position.x, spawnPoints[i].position.y + .025f, 0);
-            var startKey = Instantiate(key, startSpawnPoint, Quaternion.identity);
+            var startSpawnPoint = new Vector3(0, spawnPoints[i].position.y + .025f, spawnPoints[i].position.z);
+            var startKey = Instantiate(key, startSpawnPoint, spawnPoints[i].rotation, startKeys);
             var keyBehavior = startKey.GetComponent<KeyBehavior>();
             keyBehavior.SetSpeed(0);
             keyBehavior.SetSound(i);
         }
+    }
+    
+    private IEnumerator ResetCoroutine()
+    {
+        yield return new WaitForSeconds(restartDelay);
+
+        ResetAll();
     }
 
     private void UpdateLevel()

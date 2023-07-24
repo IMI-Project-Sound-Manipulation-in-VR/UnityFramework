@@ -18,10 +18,14 @@ public class MiniGameManager : MonoBehaviour
     private GameObject pianoTiles;
     
     private MiniGame _currentMiniGame;
+
+    private PianoTilesManager _pianoTilesManager;
         
     // Start is called before the first frame update
     private void Start()
     {
+        _pianoTilesManager = pianoTiles.GetComponent<PianoTilesManager>();
+        
         switch (startMiniGame)
         {
             case MiniGame.TowerOfHanoi: EnableTowerOfHanoi(); break;
@@ -66,6 +70,8 @@ public class MiniGameManager : MonoBehaviour
     {
         _currentMiniGame = MiniGame.TowerOfHanoi;
         
+        _pianoTilesManager.GameOver(false);
+
         towerOfHanoi.SetActive(true);
         mazeGame.SetActive(false);
         pianoTiles.SetActive(false);
@@ -75,6 +81,8 @@ public class MiniGameManager : MonoBehaviour
     {
         _currentMiniGame = MiniGame.MazeGame;
         
+        _pianoTilesManager.GameOver(false);
+
         towerOfHanoi.SetActive(false);
         mazeGame.SetActive(true);
         pianoTiles.SetActive(false);
