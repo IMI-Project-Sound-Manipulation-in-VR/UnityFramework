@@ -1,7 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading.Tasks;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 using Random = UnityEngine.Random;
 
 public class KeyBehavior : MonoBehaviour
@@ -13,24 +15,24 @@ public class KeyBehavior : MonoBehaviour
     [SerializeField] private List<AudioClip> tones;
     [SerializeField] private AudioClip failSound;
 
-    private AudioSource audioSource;
-    private MeshRenderer meshRenderer;
-    private Animator animator;
-    private PianoTilesManager pianoTilesManager;
+    private AudioSource _audioSource;
+    private MeshRenderer _meshRenderer;
+    private Animator _animator;
+    private PianoTilesManager _pianoTilesManager;
 
-    private bool tapped;
-    private bool failedToTap;
+    private bool _tapped;
+    private bool _failedToTap;
     
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
 
         var toneIndex = Random.Range(0, 2) == 0 ? position : position + 4;
-        audioSource.clip = tones[toneIndex];
+        _audioSource.clip = tones[toneIndex];
         
-        animator = GetComponentInChildren<Animator>();
-        meshRenderer = GetComponentInChildren<MeshRenderer>();
-        pianoTilesManager = GameObject.FindWithTag("Keyboard").GetComponent<PianoTilesManager>();
+        _animator = GetComponentInChildren<Animator>();
+        _meshRenderer = GetComponentInChildren<MeshRenderer>();
+        _pianoTilesManager = GameObject.FindWithTag("Keyboard").GetComponent<PianoTilesManager>();
     }
 
     // Update is called once per frame
@@ -39,7 +41,7 @@ public class KeyBehavior : MonoBehaviour
         if(speed != 0)
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(target, transform.position.y, transform.position.z), speed * Time.deltaTime);
 
-        if (transform.position.x < -0.5 && !failedToTap)
+        if (transform.position.x < -0.5 && !_failedToTap)
         {
             FailedToTap();
         }
@@ -47,7 +49,7 @@ public class KeyBehavior : MonoBehaviour
 
     public void SetSpeed(float speed)
     {
-        if(failedToTap || tapped) return;
+        if(_failedToTap || _tapped) return;
         
         this.speed = speed;
     }
@@ -57,33 +59,35 @@ public class KeyBehavior : MonoBehaviour
         this.position = pos;
     }
 
-    public void Tapped()
+    public void Tapped(SelectEnterEventArgs args)
     {
-        if(tapped || failedToTap) return;
+        if(args.interactorObject.transform.position.y <= 1) return; // just allow poking from top to bottom
+        if(_tapped || _failedToTap) return;
 
-        tapped = true;
-        pianoTilesManager.GotTap();
+        _tapped = true;
+        _pianoTilesManager.GotTap();
         speed = 0;
-        audioSource.Play();
-        animator.SetBool("fade", true);
-        StartCoroutine(DisableObject());
+        _audioSource.Play();
+        _animator.SetBool("fade", true);
+        DisableObject();
         Destroy(gameObject, 5);
     }
 
     private void FailedToTap()
     {
-        failedToTap = true;
-        audioSource.PlayOneShot(failSound);
-        animator.SetBool("failed", true);
-        pianoTilesManager.FailedTap();
+        _failedToTap = true;
+        _audioSource.PlayOneShot(failSound);
+        _animator.SetBool("failed", true);
+        _pianoTilesManager.FailedTap();
         speed = 0;
-        StartCoroutine(DisableObject());
+        DisableObject();
         Destroy(gameObject, 5);
     }
 
-    private IEnumerator DisableObject()
+    private async Task DisableObject()
     {
-        yield return new WaitForSeconds(1);
-        meshRenderer.enabled = false;
+        await Task.Delay(1000);
+
+        _meshRenderer.enabled = false;
     }
 }

@@ -7,7 +7,7 @@ public class MazeGameManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> marbles;
 
-    private List<Vector3> _marbleStartPos = new List<Vector3>();
+    private readonly List<Vector3> _marbleStartPos;
     private void Start()
     {
         foreach (var marble in marbles)
