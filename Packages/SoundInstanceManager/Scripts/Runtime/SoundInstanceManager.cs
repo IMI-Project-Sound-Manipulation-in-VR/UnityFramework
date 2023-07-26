@@ -20,8 +20,8 @@ public class SoundInstanceManager : MonoBehaviour
     [SerializeField]
     private MonoBehaviour script;
     private Type scriptType;
-    private float managerLevel;
-    private bool managerLevelActive;
+    private float managerLevel = 0.5f;
+    private bool managerLevelActive = true;
     private bool managerLevelScriptActive;
     private PropertyInfo managerLevelProperty;
 
@@ -125,7 +125,7 @@ public class SoundInstanceManager : MonoBehaviour
                 {
                     soundInstance.showInManager = EditorGUILayout.Foldout(soundInstance.showInManager, soundInstance.SoundInstanceEditorObject.InstanceName);
                 } else {
-                    EditorGUILayout.LabelField("Editor has not active audio source set!");
+                    EditorGUILayout.LabelField("Editor has no audio source!");
                 }
 
                 if (GUILayout.Button("Go to Editor!")){
