@@ -8,15 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Complete XR Origin Set Up.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Complete XR Origin Set Up.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/MiniGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/MiniGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/Piano Tiles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/Piano Tiles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Maze/MazeGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Maze/MazeGameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/PianoTilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/PianoTilesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Slice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Slice.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Tower of Hanoi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Tower of Hanoi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/TowerOfHanoiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/TowerOfHanoiManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,10 +29,15 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.1/Runtime/Interaction/Interactors/XRInteractionGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.oculus@3.3.0/Runtime/OculusLoader.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/TestingVR/MiniGameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/TowerOfHanoiManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/TestingVR/Maze/MazeGameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/PianoTilesManager.cs" />
     </changedPaths>
   </component>
@@ -113,6 +115,8 @@
       <workItem from="1689447478457" duration="476000" />
       <workItem from="1689457869815" duration="1318000" />
       <workItem from="1690239624966" duration="2356000" />
+      <workItem from="1690403833548" duration="1904000" />
+      <workItem from="1690406170059" duration="384000" />
     </task>
     <task id="LOCAL-00001" summary="solved marble rolling sound issue">
       <option name="closed" value="true" />
