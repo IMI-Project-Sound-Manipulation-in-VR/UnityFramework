@@ -138,6 +138,7 @@ public class PianoTilesManager : MonoBehaviour
         {
             var startSpawnPoint = new Vector3(0, spawnPoints[i].position.y + .025f, spawnPoints[i].position.z);
             var startKey = Instantiate(key, startSpawnPoint, spawnPoints[i].rotation, startKeys);
+            
             var keyBehavior = startKey.GetComponent<KeyBehavior>();
             keyBehavior.SetSpeed(0);
             keyBehavior.SetSound(i);

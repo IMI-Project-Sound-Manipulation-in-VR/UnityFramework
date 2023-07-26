@@ -8,7 +8,8 @@ public class SoundTest : MonoBehaviour
     private Rigidbody rb;
 
     public bool isColliding = false;
-    public float marbleRollSpeed;
+    private float marbleRollSpeed;
+    public float MarbleRollSpeed { get { return marbleRollSpeed; } set { marbleRollSpeed = value; }}
 
     // Start is called before the first frame update
     void Start()

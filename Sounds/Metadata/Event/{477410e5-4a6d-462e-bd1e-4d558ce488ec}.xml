@@ -194,9 +194,6 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 		</relationship>
 	</object>
 	<object class="GroupTrack" id="{916226a2-020e-440d-b3ad-6e8bbca442e7}">
-		<relationship name="automationTracks">
-			<destination>{d5c1fb02-a3c8-4ede-bede-7391942dbd9d}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{e5082527-46b5-4e09-97b0-1a9423300400}</destination>
 		</relationship>
@@ -204,6 +201,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 	<object class="GroupTrack" id="{98267401-6ef3-4003-8e78-ef8dc747385e}">
 		<relationship name="automationTracks">
 			<destination>{0f525ddb-e617-4f24-a24f-e07142be8b71}</destination>
+			<destination>{95d9767d-15b1-4e7b-8c6b-ba84b0dfb666}</destination>
 		</relationship>
 		<relationship name="modules">
 			<destination>{5d0021bd-1872-4208-b687-97f5867cc2a4}</destination>
@@ -542,11 +540,6 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<destination>{e5082527-46b5-4e09-97b0-1a9423300400}</destination>
 		</relationship>
 	</object>
-	<object class="AutomationTrack" id="{d5c1fb02-a3c8-4ede-bede-7391942dbd9d}">
-		<relationship name="automator">
-			<destination>{5a6d92dd-1daa-4650-aa6f-7f62735a9e7d}</destination>
-		</relationship>
-	</object>
 	<object class="EventMixerGroup" id="{e5082527-46b5-4e09-97b0-1a9423300400}">
 		<property name="color">
 			<value>Red</value>
@@ -573,6 +566,11 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<destination>{c4028b17-0f8c-417e-a5c6-af73d331107b}</destination>
 		</relationship>
 	</object>
+	<object class="AutomationTrack" id="{95d9767d-15b1-4e7b-8c6b-ba84b0dfb666}">
+		<relationship name="automator">
+			<destination>{bb4e4c09-9122-4b8e-b93f-f8592950098c}</destination>
+		</relationship>
+	</object>
 	<object class="SoundScatterer" id="{5d0021bd-1872-4208-b687-97f5867cc2a4}">
 		<property name="start">
 			<value>0.80000000000000004</value>
@@ -581,16 +579,16 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<value>0.19999999999999996</value>
 		</property>
 		<property name="polyphony">
-			<value>1</value>
+			<value>8</value>
 		</property>
 		<property name="soundStealing">
 			<value>3</value>
 		</property>
 		<property name="minimumTimeBetweenSounds">
-			<value>10000</value>
+			<value>5000</value>
 		</property>
 		<property name="maximumTimeBetweenSounds">
-			<value>38000</value>
+			<value>10000</value>
 		</property>
 		<property name="minimumScatterDistance">
 			<value>0</value>
@@ -604,6 +602,9 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 		<property name="pitchRandomization">
 			<value>3</value>
 		</property>
+		<relationship name="automators">
+			<destination>{bb4e4c09-9122-4b8e-b93f-f8592950098c}</destination>
+		</relationship>
 		<relationship name="sound">
 			<destination>{acbf7d80-1666-4bb6-a5d0-e63fd992ae3c}</destination>
 		</relationship>
@@ -840,6 +841,14 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ed196378-1896-44e8-a5c2-d7559dcd1cf2}" />
+	<object class="Automator" id="{bb4e4c09-9122-4b8e-b93f-f8592950098c}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>spawnRate</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{59c1476e-fcc6-45ea-93c5-9e2dfd3fcb74}</destination>
+		</relationship>
+	</object>
 	<object class="MultiSound" id="{acbf7d80-1666-4bb6-a5d0-e63fd992ae3c}">
 		<relationship name="sounds">
 			<destination>{1fb966e6-17cd-497e-9bbc-aecb7957450b}</destination>
@@ -934,6 +943,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 		<relationship name="automationPoints">
 			<destination>{5c194fde-c35e-43b8-a7d8-4d61b0b6ea3e}</destination>
 			<destination>{0df05d83-ba9e-47ce-82bd-d17ed27d7a22}</destination>
+			<destination>{473e87fd-a53a-4822-9842-9cf795ec0a29}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{f0bc0c6a-55c9-4296-b0ed-5ebfdcdecbb9}" />
@@ -944,6 +954,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 		<relationship name="automationPoints">
 			<destination>{9214663c-4813-43dd-8328-530f1241fa37}</destination>
 			<destination>{8b3ee9ce-83e9-4b30-a5bb-8fca5b17331c}</destination>
+			<destination>{bca74b8c-3e92-4421-8f34-47db230d2c7f}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{8ff4e09b-386b-4f5f-8b7b-88ae002e0b80}">
@@ -1030,6 +1041,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 		<relationship name="automationPoints">
 			<destination>{724b5202-2606-4432-8dc9-7c417f008cb5}</destination>
 			<destination>{2c81f7d6-049d-4cab-ab6c-c80e01967648}</destination>
+			<destination>{6209e043-1c92-4e08-885e-c56950e0f826}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{f8ad2cb0-ce7b-4f10-be2d-fcbb6414ba73}" />
@@ -1043,6 +1055,15 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 		</property>
 		<relationship name="automators">
 			<destination>{5a6d92dd-1daa-4650-aa6f-7f62735a9e7d}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationCurve" id="{59c1476e-fcc6-45ea-93c5-9e2dfd3fcb74}">
+		<relationship name="parameter">
+			<destination>{4ad59307-2c9a-498d-b318-3a35d01c3b9c}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{2e342a49-9bdf-47be-bab4-9f9d32814608}</destination>
+			<destination>{46752af7-ab2b-4563-8cf0-39a9120c48b7}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{1fb966e6-17cd-497e-9bbc-aecb7957450b}">
@@ -1247,6 +1268,14 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<value>0</value>
 		</property>
 	</object>
+	<object class="AutomationPoint" id="{473e87fd-a53a-4822-9842-9cf795ec0a29}">
+		<property name="position">
+			<value>1</value>
+		</property>
+		<property name="value">
+			<value>10</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{9214663c-4813-43dd-8328-530f1241fa37}">
 		<property name="position">
 			<value>1</value>
@@ -1260,10 +1289,24 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<value>0.20180475799835931</value>
 		</property>
 		<property name="value">
+			<value>50</value>
+		</property>
+		<property name="curveShape">
+			<value>0.5</value>
+		</property>
+		<property name="isSCurve">
+			<value>true</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{bca74b8c-3e92-4421-8f34-47db230d2c7f}">
+		<property name="position">
+			<value>0.5</value>
+		</property>
+		<property name="value">
 			<value>100</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.2874026</value>
+			<value>0.19210352</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{c22b280e-1ed2-4707-a133-694384c7ea17}">
@@ -1326,6 +1369,14 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<value>0</value>
 		</property>
 	</object>
+	<object class="AutomationPoint" id="{6209e043-1c92-4e08-885e-c56950e0f826}">
+		<property name="position">
+			<value>1</value>
+		</property>
+		<property name="value">
+			<value>10</value>
+		</property>
+	</object>
 	<object class="Automator" id="{5a6d92dd-1daa-4650-aa6f-7f62735a9e7d}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>frequencyA</value>
@@ -1333,6 +1384,22 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 		<relationship name="automationCurves">
 			<destination>{9492184c-8909-4afd-abfa-e9f20ca78195}</destination>
 		</relationship>
+	</object>
+	<object class="AutomationPoint" id="{2e342a49-9bdf-47be-bab4-9f9d32814608}">
+		<property name="position">
+			<value>0.80049261083743839</value>
+		</property>
+		<property name="value">
+			<value>100</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{46752af7-ab2b-4563-8cf0-39a9120c48b7}">
+		<property name="position">
+			<value>1</value>
+		</property>
+		<property name="value">
+			<value>500</value>
+		</property>
 	</object>
 	<object class="AutomationPoint" id="{3de40424-309e-465b-a03e-96546a7761fd}">
 		<property name="position">
@@ -1350,7 +1417,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>10</value>
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{403c79c2-6ea9-4a3a-a349-1818a3c1e571}">
@@ -1369,6 +1436,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 		<relationship name="automationPoints">
 			<destination>{09652108-7cbf-4d2e-8c2d-212ebf31f011}</destination>
 			<destination>{213a9291-5141-4fc2-9490-99d11dbfbe9d}</destination>
+			<destination>{c33c1d3d-b944-4870-b8db-ca94fb2e3c01}</destination>
 		</relationship>
 	</object>
 	<object class="AutomationPoint" id="{fcf9ccff-5d6c-48ec-a8b5-a394f269c7f6}">
@@ -1392,7 +1460,7 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>22000</value>
+			<value>500</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{213a9291-5141-4fc2-9490-99d11dbfbe9d}">
@@ -1400,7 +1468,15 @@ Rain recordings provided by Xue Qiao of BB Studio, Chongqing Qiaoya Music and Cu
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>2200</value>
+			<value>22000</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{c33c1d3d-b944-4870-b8db-ca94fb2e3c01}">
+		<property name="position">
+			<value>0.5</value>
+		</property>
+		<property name="value">
+			<value>500</value>
 		</property>
 	</object>
 </objects>
