@@ -13,9 +13,6 @@ public class HRConnector : MonoBehaviour
     private void Awake()
     {
         HeartBeatWindow.OnNotifyHeartBeat += CountUp;
-        
-        Debug.Log(Remap(50, 65, 40, 0.5f, 1f));
-        Debug.Log(Remap(120, 75, 140, 0.5f, 0f));
     }
     
     private void CountUp(DateTime time, int value)

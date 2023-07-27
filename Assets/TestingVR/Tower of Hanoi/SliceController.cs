@@ -26,6 +26,7 @@ namespace TestingVR.Tower_of_Hanoi
                 yield return new WaitForFixedUpdate();
                 if (!IsInGrab() && transform.position.x != lastRod.transform.position.x)
                 {
+
                     lastRod.StackSlice(this);
                 }
             }
