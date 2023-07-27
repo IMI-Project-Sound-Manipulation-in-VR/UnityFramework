@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0901e3e-e881-458c-a3ce-b7e9eb56e792" name="Changes" comment="solved marble rolling sound issue">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/riderModule.iml" beforeDir="false" />
+    <list default="true" id="e0901e3e-e881-458c-a3ce-b7e9eb56e792" name="Changes" comment="Hanoi glitch fix,&#10;Hanoi bug fix,&#10;Hanoi lose slice fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/RodController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/RodController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/SliceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/SliceController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Tower of Hanoi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Tower of Hanoi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/HVRConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/HRConnector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/HVRConnector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/HRConnector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +122,8 @@
       <workItem from="1690406170059" duration="384000" />
       <workItem from="1690413756082" duration="740000" />
       <workItem from="1690414520574" duration="36000" />
-      <workItem from="1690414606914" duration="2963000" />
+      <workItem from="1690414606914" duration="3088000" />
+      <workItem from="1690418020644" duration="741000" />
     </task>
     <task id="LOCAL-00001" summary="solved marble rolling sound issue">
       <option name="closed" value="true" />
@@ -142,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689447820206</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Hanoi glitch fix,&#10;Hanoi bug fix,&#10;Hanoi lose slice fix">
+      <created>1690417759559</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690417759559</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +162,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="solved marble rolling sound issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="solved marble rolling sound issue" />
+    <MESSAGE value="Hanoi glitch fix,&#10;Hanoi bug fix,&#10;Hanoi lose slice fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hanoi glitch fix,&#10;Hanoi bug fix,&#10;Hanoi lose slice fix" />
   </component>
 </project>
