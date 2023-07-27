@@ -8,7 +8,10 @@ namespace TestingVR.Maze
     {
         private Transform _interactorTransform;
         private XRGrabInteractable _grabInteractable;
-    
+
+        private float previousEulerAngleZ;
+        private float newEulerAngleZ;
+        
         private void Start() 
         {
             _grabInteractable = GetComponent<XRGrabInteractable>();
@@ -21,7 +24,7 @@ namespace TestingVR.Maze
             if (_interactorTransform != null)
             {
                 var thisRotation = transform.rotation;
-                Vector3 newRotation = new Vector3(thisRotation.eulerAngles.x, thisRotation.eulerAngles.y, _interactorTransform.rotation.eulerAngles.z);
+                Vector3 newRotation = new Vector3(thisRotation.eulerAngles.x, thisRotation.eulerAngles.y, _interactorTransform.rotation.eulerAngles.z + newEulerAngleZ);
                 thisRotation = Quaternion.Euler(newRotation);
                 transform.rotation = thisRotation;
             }
@@ -30,10 +33,12 @@ namespace TestingVR.Maze
         private void Selected(SelectEnterEventArgs arguments) 
         {
             _interactorTransform = arguments.interactorObject.transform;
+            newEulerAngleZ = previousEulerAngleZ - _interactorTransform.rotation.eulerAngles.z;
         }
 
-        private void Deselected(SelectExitEventArgs arguments) 
+        private void Deselected(SelectExitEventArgs arguments)
         {
+            previousEulerAngleZ = transform.rotation.eulerAngles.z;
             _interactorTransform = null;
         }
     }
