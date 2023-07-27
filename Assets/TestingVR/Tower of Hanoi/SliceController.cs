@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -7,39 +9,46 @@ namespace TestingVR.Tower_of_Hanoi
     [RequireComponent(typeof(XRGrabInteractable))]
     public class SliceController : MonoBehaviour
     {
-        private XRGrabInteractable _grabInteractable;
+        public XRGrabInteractable GrabInteractable { get; set; }
 
-        public XRGrabInteractable GrabInteractable
-        {
-            get => _grabInteractable;
-            set => _grabInteractable = value;
-        }
-
+        public RodController lastRod;
 
         private void Awake()
         {
-            _grabInteractable = GetComponent<XRGrabInteractable>();
+            GrabInteractable = GetComponent<XRGrabInteractable>();
+            StartCoroutine(LateFixedUpdate());
+        }
+
+        private IEnumerator LateFixedUpdate()
+        {
+            while (true)
+            {
+                yield return new WaitForFixedUpdate();
+                if (!IsInGrab() && transform.position.x != lastRod.transform.position.x)
+                {
+                    lastRod.StackSlice(this);
+                }
+            }
         }
 
         public void DisableGrab()
         {
-            _grabInteractable.enabled = false;
+            GrabInteractable.enabled = false;
         }
 
         public void EnableGrab()
         {
-            _grabInteractable.enabled = true;
+            GrabInteractable.enabled = true;
         }
 
         public bool IsInGrab()
         {
-            
-            return _grabInteractable.isSelected;
+            return GrabInteractable.isSelected;
         }
 
         public UnityEvent<SelectEnterEventArgs> GetOnGrabEvent()
         {
-            return _grabInteractable.selectEntered;
+            return GrabInteractable.selectEntered;
         }
     }
 }
