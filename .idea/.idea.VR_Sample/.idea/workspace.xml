@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0901e3e-e881-458c-a3ce-b7e9eb56e792" name="Changes" comment="solved marble rolling sound issue">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/indexLayout.xml" afterDir="false" />
+    <list default="true" id="e0901e3e-e881-458c-a3ce-b7e9eb56e792" name="Changes" comment="Hanoi glitch fix,&#10;Hanoi bug fix,&#10;Hanoi lose slice fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/MiniGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/MiniGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/Piano Tiles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/Piano Tiles.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/PianoTilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/PianoTilesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Slice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Slice.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Tower of Hanoi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/Tower of Hanoi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/TowerOfHanoiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/TowerOfHanoiManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/HVRConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/HRConnector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/HVRConnector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/HRConnector.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +23,17 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/afb51423a29947c09a21689e8d96b70a1a000/e8/439da29f/RigidbodyConstraints.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/RodCanvasDebug.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.1/Runtime/Interaction/Interactors/XRInteractionGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.oculus@3.3.0/Runtime/OculusLoader.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/TestingVR/MiniGameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/TowerOfHanoiManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/TestingVR/Maze/MazeGameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/TestingVR/Piano Tiles/PianoTilesManager.cs" />
     </changedPaths>
   </component>
@@ -48,11 +46,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.23f1\Editor\Unity.exe" />
@@ -82,6 +85,7 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -91,6 +95,7 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -113,6 +118,12 @@
       <workItem from="1689447478457" duration="476000" />
       <workItem from="1689457869815" duration="1318000" />
       <workItem from="1690239624966" duration="2356000" />
+      <workItem from="1690403833548" duration="1904000" />
+      <workItem from="1690406170059" duration="384000" />
+      <workItem from="1690413756082" duration="740000" />
+      <workItem from="1690414520574" duration="36000" />
+      <workItem from="1690414606914" duration="3088000" />
+      <workItem from="1690418020644" duration="741000" />
     </task>
     <task id="LOCAL-00001" summary="solved marble rolling sound issue">
       <option name="closed" value="true" />
@@ -122,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689447820206</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Hanoi glitch fix,&#10;Hanoi bug fix,&#10;Hanoi lose slice fix">
+      <created>1690417759559</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690417759559</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,10 +159,10 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="solved marble rolling sound issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="solved marble rolling sound issue" />
+    <MESSAGE value="Hanoi glitch fix,&#10;Hanoi bug fix,&#10;Hanoi lose slice fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hanoi glitch fix,&#10;Hanoi bug fix,&#10;Hanoi lose slice fix" />
   </component>
 </project>
