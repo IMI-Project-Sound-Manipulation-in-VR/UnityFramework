@@ -22,6 +22,9 @@ namespace TestingVR.Tower_of_Hanoi
 
         public void StackSlice(SliceController slice)
         {
+            if (_stack.Contains(slice))
+                return;
+
             slice.lastRod = this;
             if (_stack.TryPeek(out var peek))
             {
