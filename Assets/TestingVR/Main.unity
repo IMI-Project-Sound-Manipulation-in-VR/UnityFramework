@@ -514,6 +514,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 140.301, y: -90.14398, z: -48.575012}
+--- !u!1 &615395178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6341913431820124149, guid: 2da85019de694a5429cf7ecc2f1a340e, type: 3}
+  m_PrefabInstance: {fileID: 2097316815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &638887818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4568260420906790, guid: 2cebbe72b3420fb47b0861343e1b0a46, type: 3}
@@ -593,7 +598,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 165152596916689016, guid: d30fb13da95af9344bac5f9fe536e68a, type: 3}
   m_PrefabInstance: {fileID: 757738565}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &757738571
+--- !u!82 &757738575
 AudioSource:
   m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1281,6 +1286,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1989261788704542808, guid: 2da85019de694a5429cf7ecc2f1a340e, type: 3}
+      propertyPath: attenuationObject
+      value: 
+      objectReference: {fileID: 615395178}
     - target: {fileID: 2052360048952807664, guid: 2da85019de694a5429cf7ecc2f1a340e, type: 3}
       propertyPath: m_RootOrder
       value: 0

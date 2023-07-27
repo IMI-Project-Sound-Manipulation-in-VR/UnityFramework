@@ -11,6 +11,9 @@ public class SoundTest : MonoBehaviour
     private float marbleRollSpeed;
     public float MarbleRollSpeed { get { return marbleRollSpeed; } set { marbleRollSpeed = value; }}
 
+    private float marble;
+    public float Marble { get { return marbleRollSpeed; } set { marbleRollSpeed = value; }}
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,10 @@ public class SoundTest : MonoBehaviour
             Vector3 velocity = rb.velocity;
             marbleRollSpeed = velocity.magnitude * 5;
         }
+
+        // prevents master control of sound manager
+        // to override this value
+        marble = 0;
     }
 
     private void OnCollisionEnter(Collision collision)
