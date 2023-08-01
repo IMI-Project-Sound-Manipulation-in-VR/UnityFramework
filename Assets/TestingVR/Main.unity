@@ -180,6 +180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3a2b6cdde723f489f9b7d1972b0065, type: 3}
+--- !u!1 &186303494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1601021911403127343, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
+  m_PrefabInstance: {fileID: 583336444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &349068152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -247,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2885069309608814416, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2885069309608814417, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
       propertyPath: m_RootOrder
@@ -293,6 +298,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2885069310070884355, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
+      propertyPath: outerMaze
+      value: 
+      objectReference: {fileID: 186303494}
     m_RemovedComponents:
     - {fileID: 8503563080005258792, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
     - {fileID: 2885069310168246693, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
@@ -372,7 +381,6 @@ MonoBehaviour:
       Data3: -1459838052
       Data4: -472731183
     Path: event:/Marble/MarbleOnWood
-  showInManager: 0
   reflectionScript: {fileID: 583336447}
 --- !u!114 &583336453
 MonoBehaviour:
@@ -395,7 +403,6 @@ MonoBehaviour:
       Data3: -1459838052
       Data4: -472731183
     Path: event:/Marble/MarbleOnWood
-  showInManager: 0
   reflectionScript: {fileID: 583336449}
 --- !u!114 &583336454
 MonoBehaviour:
@@ -418,7 +425,6 @@ MonoBehaviour:
       Data3: -1459838052
       Data4: -472731183
     Path: event:/Marble/MarbleOnWood
-  showInManager: 0
   reflectionScript: {fileID: 583336451}
 --- !u!1 &590969471
 GameObject:
@@ -625,7 +631,6 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  showInManager: 0
   reflectionScript: {fileID: 0}
 --- !u!4 &1060129314
 Transform:
@@ -961,7 +966,6 @@ MonoBehaviour:
       Data3: 1431117501
       Data4: -326572916
     Path: event:/Ambience/Forest
-  showInManager: 0
   reflectionScript: {fileID: 0}
 --- !u!4 &1363792194
 Transform:
@@ -1048,6 +1052,10 @@ PrefabInstance:
     - target: {fileID: 6260700339525053149, guid: 83eab675546aaaf42a81ee904b37b0b0, type: 3}
       propertyPath: m_Name
       value: Tower of Hanoi
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260700339525053149, guid: 83eab675546aaaf42a81ee904b37b0b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83eab675546aaaf42a81ee904b37b0b0, type: 3}

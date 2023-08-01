@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundTest : MonoBehaviour
 {
     public GameObject innerMaze;
+    public GameObject outerMaze;
     private Rigidbody rb;
 
     public bool isColliding = false;
@@ -12,7 +13,7 @@ public class SoundTest : MonoBehaviour
     public float MarbleRollSpeed { get { return marbleRollSpeed; } set { marbleRollSpeed = value; }}
 
     private float marble;
-    public float Marble { get { return marbleRollSpeed; } set { marbleRollSpeed = value; }}
+    public float Marble { get { return marble; } set { marble = value; }}
 
     // Start is called before the first frame update
     void Start()
@@ -40,11 +41,17 @@ public class SoundTest : MonoBehaviour
             isColliding = true;
             Debug.Log("Sphere collider is in contact with the mesh collider.");
         }
+
+        if(collision.gameObject == outerMaze && isColliding == false)
+        {
+            marble = 1;
+            isColliding = true;
+        }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject == innerMaze)
+        if (collision.gameObject == innerMaze || collision.gameObject == outerMaze)
         {
             isColliding = false;
             marbleRollSpeed = 0;

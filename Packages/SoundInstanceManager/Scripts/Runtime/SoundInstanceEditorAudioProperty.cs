@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using FMODUnity;
+using System.Linq;
 
 public enum SoundInstanceEditorAudioPropertyEvaluationType
 {
@@ -90,6 +91,103 @@ public class SoundInstanceEditorAudioProperty
         defaultMinValue = template.propertyData.defaultMinValue;
         defaultMaxValue = template.propertyData.defaultMaxValue;
     }
+
+    public void SetAudioPropertyFromAudioProperty(SoundInstanceEditorAudioProperty audioProperty)
+    {
+        propertyName = audioProperty.propertyName;
+        propertyEvaluationType = audioProperty.propertyEvaluationType;
+        propertyControlType = audioProperty.propertyControlType;
+        propertyType = audioProperty.propertyType;
+        showProperty = audioProperty.showProperty;
+        curve = audioProperty.curve;
+        level = audioProperty.level;
+        labels = audioProperty.labels;
+        inputValue = audioProperty.inputValue;
+        outputValue = audioProperty.outputValue;
+        minValue = audioProperty.minValue;
+        maxValue = audioProperty.maxValue;
+        defaultMinValue = audioProperty.defaultMinValue;
+        defaultMaxValue = audioProperty.defaultMaxValue;
+    }
+
+    public override bool Equals(object obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+        {
+            return false;
+        }
+
+        SoundInstanceEditorAudioProperty other = (SoundInstanceEditorAudioProperty)obj;
+
+        // Compare all the fields here
+        if (!propertyName.Equals(other.propertyName))
+            return false;
+
+        if (propertyEvaluationType != other.propertyEvaluationType)
+            return false;
+
+        if (propertyControlType != other.propertyControlType)
+            return false;
+
+        if (propertyType != other.propertyType)
+            return false;
+
+        if (showProperty != other.showProperty)
+            return false;
+
+        if (!AreAnimationCurvesEqual(curve, other.curve))
+            return false;
+
+        if (!level.Equals(other.level))
+            return false;
+
+        if (!AreStringArraysEqual(labels, other.labels))
+            return false;
+
+        if (inputValue != other.inputValue)
+            return false;
+
+        if (minValue != other.minValue)
+            return false;
+
+        if (maxValue != other.maxValue)
+            return false;
+
+        if (defaultMinValue != other.defaultMinValue)
+            return false;
+
+        if (defaultMaxValue != other.defaultMaxValue)
+            return false;
+
+        // If all fields match, return true
+        return true;
+    }
+
+    private bool AreAnimationCurvesEqual(AnimationCurve curve1, AnimationCurve curve2)
+    {
+        // Compare AnimationCurves using their serialized representation
+        // You can use other comparison methods if needed
+        return curve1 == curve2 || (curve1 != null && curve1.Equals(curve2));
+    }
+
+    private bool AreStringArraysEqual(string[] array1, string[] array2)
+    {
+        // Compare string arrays
+        // You can use other comparison methods if needed
+        return array1 == array2 || (array1 != null && array2 != null && array1.SequenceEqual(array2));
+    }
+
+    public override int GetHashCode()
+    {
+        int hash = 17;
+        hash = hash * 23 + propertyName.GetHashCode();
+        hash = hash * 23 + propertyEvaluationType.GetHashCode();
+        hash = hash * 23 + propertyControlType.GetHashCode();
+        hash = hash * 23 + propertyType.GetHashCode();
+        // Add more fields to the hash calculation as needed
+        return hash;
+    }
+
 }
 
 

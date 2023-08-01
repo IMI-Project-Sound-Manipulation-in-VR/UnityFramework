@@ -40,7 +40,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165152596916689016}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29ed7d858bcf3cf468e4f5200683a0fa, type: 3}
   m_Name: 
@@ -60,14 +60,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554a76e9296a58a4a9d56364c6759c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  editorType: 1
-  audioClipReference: {fileID: 8300000, guid: e837eed411878ee4bbdeed3abd9355ba, type: 3}
+  editorType: 0
+  audioClipReference: {fileID: 0}
   fmodEventReference:
     Guid:
-      Data1: 1198788837
-      Data2: 1177438829
-      Data3: 1431117501
-      Data4: -326572916
-    Path: event:/Ambience/Forest
-  showInManager: 0
-  reflectionScript: {fileID: 0}
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  reflectionScript: {fileID: 165152596916689022}
