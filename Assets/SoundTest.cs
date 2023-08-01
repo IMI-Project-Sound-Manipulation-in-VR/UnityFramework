@@ -8,6 +8,12 @@ public class SoundTest : MonoBehaviour
     public GameObject outerMaze;
     private Rigidbody rb;
 
+    private float volume = 1.0f;
+    public float Volume { get { return volume; } set { volume = value; } }
+
+    private float pitch = 0.5f;
+    public float Pitch { get { return pitch; } set { pitch = value; } }
+
     public bool isColliding = false;
     private float marbleRollSpeed;
     public float MarbleRollSpeed { get { return marbleRollSpeed; } set { marbleRollSpeed = value; }}

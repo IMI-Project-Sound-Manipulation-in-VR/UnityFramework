@@ -302,6 +302,14 @@ PrefabInstance:
       propertyPath: outerMaze
       value: 
       objectReference: {fileID: 186303494}
+    - target: {fileID: 2885069310168246694, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
+      propertyPath: outerMaze
+      value: 
+      objectReference: {fileID: 186303494}
+    - target: {fileID: 8503563080005258795, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
+      propertyPath: outerMaze
+      value: 
+      objectReference: {fileID: 186303494}
     m_RemovedComponents:
     - {fileID: 8503563080005258792, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
     - {fileID: 2885069310168246693, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
@@ -875,6 +883,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 92552270374612438, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 92552270374612439, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

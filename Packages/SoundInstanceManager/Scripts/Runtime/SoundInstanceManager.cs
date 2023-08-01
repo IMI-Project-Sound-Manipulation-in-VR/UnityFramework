@@ -43,6 +43,7 @@ public class SoundInstanceManager : MonoBehaviour
         for(int i = 0; i < soundInstancesUnity.Length; i++)
         {
             SoundInstanceEditor soundInstance = soundInstancesUnity[i];
+            //soundInstance.InitializeEditorObject(); // TODO;
             soundInstance.SetManagerLevel(managerLevelActive, managerLevel);
             soundInstance.UpdateInspectorAndOnRunning();
         }
@@ -50,6 +51,7 @@ public class SoundInstanceManager : MonoBehaviour
         for(int i = 0; i < soundInstancesFmod.Length; i++)
         {
             SoundInstanceEditor soundInstance = soundInstancesFmod[i];
+            //soundInstance.InitializeEditorObject(); // TODO
             soundInstance.SetManagerLevel(managerLevelActive, managerLevel);
             soundInstance.UpdateInspectorAndOnRunning();
         }
@@ -165,10 +167,11 @@ public class SoundInstanceManager : MonoBehaviour
             for(int i = 0; i < soundInstancesUnity.Length; i++)
             {
                 SoundInstanceEditor soundInstance = soundInstancesUnity[i];
-                if(soundInstance.SoundInstanceEditorObject == null)
+                if(soundInstance != null)
                 {
                     soundInstance.InitializeEditorObject();
                 }
+                
                 
             }
         }
@@ -178,7 +181,7 @@ public class SoundInstanceManager : MonoBehaviour
             for(int i = 0; i < soundInstancesFmod.Length; i++)
             {
                 SoundInstanceEditor soundInstance = soundInstancesFmod[i];
-                if(soundInstance.SoundInstanceEditorObject == null)
+                if (soundInstance != null)
                 {
                     soundInstance.InitializeEditorObject();
                 }
