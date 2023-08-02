@@ -14,6 +14,6 @@ public class ManagerLevelManipulation : MonoBehaviour
 
     private void UpdateValue()
     {
-        soundInstanceManager.SetManagerLevel(true, Random.Range(minValue, maxValue));
+        soundInstanceManager.SetManagerLevel(this.gameObject, true, Random.Range(minValue, maxValue));
     }
 }
