@@ -257,7 +257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2885069309608814416, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2885069309608814417, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
       propertyPath: m_RootOrder
@@ -533,11 +533,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 140.301, y: -90.14398, z: -48.575012}
---- !u!1 &615395178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6341913431820124149, guid: 2da85019de694a5429cf7ecc2f1a340e, type: 3}
-  m_PrefabInstance: {fileID: 2097316815}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &638887818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4568260420906790, guid: 2cebbe72b3420fb47b0861343e1b0a46, type: 3}
@@ -550,6 +545,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1568478203, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568478203, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568478203, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568478203, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568478203, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971270023, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971270023, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971270023, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971270023, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971270023, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971270023, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4957929328691501760, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
       propertyPath: m_Name
       value: Piano Tiles
@@ -596,6 +635,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4957929328691501788, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252865533994151, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252865533994151, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252865533994151, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252865533994151, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252865533994151, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252865861047376, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252865861047376, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252865861047376, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252865861047376, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252865861047376, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252865861047376, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364252866375057892, guid: 6bea4becad5b7fe42a63f9456f9a1634, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -804,7 +891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7b21e61f2d78f4d9e3082bde1d3a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMiniGame: 2
+  startMiniGame: 0
   towerOfHanoi: {fileID: 2073667451}
   mazeGame: {fileID: 583336445}
   pianoTiles: {fileID: 880257362}
@@ -1229,10 +1316,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -1989261788704542808, guid: 2da85019de694a5429cf7ecc2f1a340e, type: 3}
-      propertyPath: attenuationObject
-      value: 
-      objectReference: {fileID: 615395178}
     - target: {fileID: 2052360048952807664, guid: 2da85019de694a5429cf7ecc2f1a340e, type: 3}
       propertyPath: m_RootOrder
       value: 0
