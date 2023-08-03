@@ -12,7 +12,8 @@ public class HRConnector : MonoBehaviour
 
     private void Awake()
     {
-        HeartBeatWindow.OnNotifyHeartBeat += CountUp;
+        HeartBeat.OnNotifyHeartBeat += CountUp;
+        MiniGameManager.OnNotifyMiniGameChange += ResetGraph;
     }
     
     private void CountUp(DateTime time, int value)
@@ -33,15 +34,21 @@ public class HRConnector : MonoBehaviour
         _graph.data = newData;
     }
 
+    private void ResetGraph()
+    {
+        Debug.Log("bruh");
+        _graph.data = new int[0];
+    }
+
     private void AdjustStressManipulator(int value)
     {
         if (value <= 65)
         {
-            _soundInstanceManager.SetManagerLevel(true, Remap(value, 65, 40, 0.5f, 1f));
+            _soundInstanceManager.SetManagerLevel(this.gameObject, true, Remap(value, 65, 40, 0.5f, 1f));
         }
         if (value >= 75)
         {
-            _soundInstanceManager.SetManagerLevel(true, Remap(value, 75, 140, 0.5f, 0f));
+            _soundInstanceManager.SetManagerLevel(this.gameObject, true, Remap(value, 75, 140, 0.5f, 0f));
         }
     }
     

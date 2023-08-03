@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &34672114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 92552270374612436, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
+  m_PrefabInstance: {fileID: 1212084049}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &146352224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -234,6 +239,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b71e387166e4ce648849bbd6b762b736, type: 3}
+--- !u!1 &439410645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 439410647}
+  - component: {fileID: 439410646}
+  m_Layer: 0
+  m_Name: HeartBeat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &439410646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439410645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb977e4095ae211409fba11d3b8ebafc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &439410647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439410645}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &470286903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4556984811349870, guid: b71e387166e4ce648849bbd6b762b736, type: 3}
@@ -252,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2885069309608814416, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2885069309608814417, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
       propertyPath: m_RootOrder
@@ -528,11 +577,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 140.301, y: -90.14398, z: -48.575012}
---- !u!1 &615395178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6341913431820124149, guid: 2da85019de694a5429cf7ecc2f1a340e, type: 3}
-  m_PrefabInstance: {fileID: 2097316815}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &638887818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4568260420906790, guid: 2cebbe72b3420fb47b0861343e1b0a46, type: 3}
@@ -799,7 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7b21e61f2d78f4d9e3082bde1d3a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMiniGame: 2
+  startMiniGame: 0
   towerOfHanoi: {fileID: 2073667451}
   mazeGame: {fileID: 583336445}
   pianoTiles: {fileID: 880257362}
@@ -1004,12 +1048,27 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 92552270374612437, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
   m_PrefabInstance: {fileID: 1212084049}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 34672114}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4eb37d373a9ad5f469b2a4c91af958f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1854038966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34672114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012322a2c4b08e43880a22eece9a3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _graph:
+    data: 
+  _soundInstanceManager: {fileID: 1854038963}
 --- !u!1001 &2073667450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1209,10 +1268,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -1989261788704542808, guid: 2da85019de694a5429cf7ecc2f1a340e, type: 3}
-      propertyPath: attenuationObject
-      value: 
-      objectReference: {fileID: 615395178}
     - target: {fileID: 2052360048952807664, guid: 2da85019de694a5429cf7ecc2f1a340e, type: 3}
       propertyPath: m_RootOrder
       value: 0

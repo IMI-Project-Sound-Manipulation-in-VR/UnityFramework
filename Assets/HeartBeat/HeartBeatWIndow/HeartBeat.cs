@@ -1,19 +1,17 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.iOS;
 
-public class HeartBeatWindow : EditorWindow
+public class HeartBeat : MonoBehaviour
 {
     public static event Action<DateTime, int> OnNotifyHeartBeat;
-    
+
     //error
     private string _lastError;
-    Dictionary<string, Dictionary<string, string>> _devices = new Dictionary<string, Dictionary<string, string>>();
+    readonly Dictionary<string, Dictionary<string, string>> _devices = new Dictionary<string, Dictionary<string, string>>();
     private const string HeartBeatDefault = "Heart Beat currently not tracked";
     private string _heartBeatValue = HeartBeatDefault;
 
@@ -41,79 +39,13 @@ public class HeartBeatWindow : EditorWindow
     private bool _isScanningCharacteristics;
     private int _selectedCharacteristics;
     private List<string> _characteristicsOptions = new();
-    
+
     //subscribe
     private bool _isSubscribed;
-    
-    [MenuItem("Custom/Heart Beat")]
-    public static void ShowWindow()
-    {
-        GetWindow<HeartBeatWindow>("Heart Beat");
-    }
-
-    private void OnGUI()
-    {
-        GUILayout.Label("Heart Beat: Service ID = 0x180D | Characteristics ID = 0x2a37", EditorStyles.boldLabel);
-        
-        if (GUILayout.Button("Reset Bluetooth"))
-        {
-            ResetBluetooth();
-        }
-        EditorGUILayout.Space();
-
-        if (GUILayout.Button(_currentDeviceScanText))
-        {
-            StartStopDeviceScan();
-        }
-        _selectedDevice = EditorGUILayout.Popup("Found Devices", _selectedDevice, _deviceNames.ToArray());
-        EditorGUILayout.Space();
-        
-        if (GUILayout.Button(_currentServiceScanText))
-        {
-            StartServiceScan();
-        }
-        _selectedService = EditorGUILayout.Popup("Found Services", _selectedService, _serviceOptions.ToArray());
-        EditorGUILayout.Space();
-        
-        if (GUILayout.Button(_currentCharacteristicsScanText))
-        {
-            StartCharacteristicScan();
-        }
-        _selectedCharacteristics = EditorGUILayout.Popup("Found Characteristics", _selectedCharacteristics, _characteristicsOptions.ToArray());
-        EditorGUILayout.Space();
-        
-        if (GUILayout.Button("Subscribe!"))
-        {
-            Subscribe();
-        }
-        EditorGUILayout.Space();
-        
-        GUILayout.Label("ErrorMessage: " + _lastError, EditorStyles.boldLabel);
-        EditorGUILayout.Space();
-        
-        GUILayout.Label(_heartBeatValue, EditorStyles.boldLabel);
-    }
 
     private void Update()
     {
-        if (EditorApplication.isPlaying)
-        {
-            UpdateBluetooth();
-        }
-    }
-
-    private void OnInspectorUpdate()
-    {
-        if (!EditorApplication.isPlaying)
-        {
-            UpdateBluetooth();
-        }
-        Repaint();
-    }
-
-    private void OnDestroy()
-    {
-        ResetBluetooth();
+        UpdateBluetooth();
     }
 
     private void StartStopDeviceScan()
@@ -135,19 +67,7 @@ public class HeartBeatWindow : EditorWindow
             _currentDeviceScanText = DeviceScanOngoing;
         }
     }
-    
-    private void StartServiceScan()
-    {
-        if (!_isScanningServices)
-        {
-            // start new scan
-            _serviceOptions = new List<string>();
-            BleApi.ScanServices(_deviceOptions[_selectedDevice]);
-            _isScanningServices = true;
-            _currentServiceScanText = ServiceScanOngoing;
-        }
-    }
-    
+
     private void StartCharacteristicScan()
     {
         if (!_isScanningCharacteristics)
@@ -158,19 +78,6 @@ public class HeartBeatWindow : EditorWindow
             _isScanningCharacteristics = true;
             _currentCharacteristicsScanText = CharacteristicsScanOngoing;
         }
-    }
-    
-    private void Subscribe()
-    {
-        // no error code available in non-blocking mode
-        BleApi.SubscribeCharacteristic(
-            _deviceOptions[_selectedDevice], 
-            _serviceOptions[_selectedService], 
-            _characteristicsOptions[_selectedCharacteristics],
-            false
-            );
-        
-        _isSubscribed = true;
     }
 
     private void ResetBluetooth()
@@ -196,7 +103,7 @@ public class HeartBeatWindow : EditorWindow
         _heartBeatValue = HeartBeatDefault;
     }
 
-    private void UpdateBluetooth()
+    public void UpdateBluetooth()
     {
         BleApi.ScanStatus status;
         if (_isScanningDevices)
@@ -289,5 +196,95 @@ public class HeartBeatWindow : EditorWindow
                 _lastError = res.msg;
             }
         }
+    }
+
+    private void Subscribe()
+    {
+        // no error code available in non-blocking mode
+        BleApi.SubscribeCharacteristic(
+            _deviceOptions[_selectedDevice], 
+            _serviceOptions[_selectedService], 
+            _characteristicsOptions[_selectedCharacteristics],
+            false
+            );
+        
+        _isSubscribed = true;
+    }
+
+    private void StartServiceScan()
+    {
+        if (!_isScanningServices)
+        {
+            // start new scan
+            _serviceOptions = new List<string>();
+            BleApi.ScanServices(_deviceOptions[_selectedDevice]);
+            _isScanningServices = true;
+            _currentServiceScanText = ServiceScanOngoing;
+        }
+    }
+
+    public void InspectorGUI()
+    {
+        GUILayout.Label("Heart Beat: Service ID = 0x180D | Characteristics ID = 0x2a37", EditorStyles.boldLabel);
+        
+        if (GUILayout.Button("Reset Bluetooth"))
+        {
+            ResetBluetooth();
+        }
+        EditorGUILayout.Space();
+
+        if (GUILayout.Button(_currentDeviceScanText))
+        {
+            StartStopDeviceScan();
+        }
+        _selectedDevice = EditorGUILayout.Popup("Found Devices", _selectedDevice, _deviceNames.ToArray());
+        EditorGUILayout.Space();
+        
+        if (GUILayout.Button(_currentServiceScanText))
+        {
+            StartServiceScan();
+        }
+        _selectedService = EditorGUILayout.Popup("Found Services", _selectedService, _serviceOptions.ToArray());
+        EditorGUILayout.Space();
+        
+        if (GUILayout.Button(_currentCharacteristicsScanText))
+        {
+            StartCharacteristicScan();
+        }
+        _selectedCharacteristics = EditorGUILayout.Popup("Found Characteristics", _selectedCharacteristics, _characteristicsOptions.ToArray());
+        EditorGUILayout.Space();
+        
+        if (GUILayout.Button("Subscribe!"))
+        {
+            Subscribe();
+        }
+        EditorGUILayout.Space();
+        
+        GUILayout.Label("ErrorMessage: " + _lastError, EditorStyles.boldLabel);
+        EditorGUILayout.Space();
+        
+        GUILayout.Label(_heartBeatValue, EditorStyles.boldLabel);
+    }
+}
+
+[CustomEditor(typeof(HeartBeat))]
+public class HeartBeatEditor: UnityEditor.Editor
+{
+    private HeartBeat _heartBeat;
+
+    private void OnEnable()
+    {
+        _heartBeat = (HeartBeat)target;
+    }
+
+    public override void OnInspectorGUI()
+    {
+        _heartBeat.InspectorGUI();
+
+        if(!Application.isPlaying)
+        {
+            _heartBeat.UpdateBluetooth();                
+        }
+            
     }
 }
