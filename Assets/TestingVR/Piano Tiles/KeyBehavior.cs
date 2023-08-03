@@ -22,6 +22,7 @@ public class KeyBehavior : MonoBehaviour
 
     private bool _tapped;
     private bool _failedToTap;
+    private bool hovered;
     
     private void Start()
     {
@@ -58,10 +59,18 @@ public class KeyBehavior : MonoBehaviour
     {
         this.position = pos;
     }
-
+    
+    public void Hovered(SelectExitEventArgs args)
+    {
+        hovered = true;
+    }
+    
     public void Tapped(SelectEnterEventArgs args)
     {
-        if(args.interactorObject.transform.position.y <= 1) return; // just allow poking from top to bottom
+        //if(args.interactorObject.transform.position.y <= 1) return; // just allow poking from top to bottom
+        
+        if (!hovered) return;
+         
         if(_tapped || _failedToTap) return;
 
         _tapped = true;

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
@@ -7,83 +8,83 @@ using Random = UnityEngine.Random;
 
 public class PianoTilesManager : MonoBehaviour
 {
-    public int level = 0;
-    public float playTime;
-
-    [SerializeField] private float timeLimit = 60;
-    [SerializeField] private float maxSpeed;
-    [SerializeField] private float minSpeed;
-    [SerializeField] private float speedIncreasedBy;
+    public int score = 0;
+    public int highScore = 0;
     
-    [SerializeField] private float maxDelay;
-    [SerializeField] private float minDelay;
+    [SerializeField] private float timeLimit = 60;
+    [SerializeField] private float playTime;
+    
+    [SerializeField] private float startSpeed = 1;
+    
+    [SerializeField] private float startMaxDelay;
     [SerializeField] private float startMinDelay;
     
-    [SerializeField] private float resetBy = 0.5f;
-    
-    [SerializeField] private int restartDelay = 1;
-    
+    [SerializeField] private float increasedBy;
+
     [SerializeField] private GameObject key;
-    [SerializeField] private Text levelText;
+    [SerializeField] private Text highScoreText;
+    [SerializeField] private Text scoreText;
     [SerializeField] private Transform startKeys;
     [SerializeField] private List<Transform> spawnPoints;
 
-    private float _speed = 1;
-    private float _delay;
+    private float _currSpeed;
     private float _currMaxDelay;
     private float _currMinDelay;
-    private int _score;
+    private int _taps;
     
     private void Start()
     {
         ResetAll(0);
     }
 
-    private void Update()
+    /* private void Update()
     {
-        if (_score > 3)
+        if (_taps > 3)
             playTime += Time.deltaTime;
 
         if (playTime >= timeLimit)
             RestartGame(restartDelay);
-    }
+    }*/
 
     public void GotTap()
     {
-        _score++;
+        _taps++;
+        SetValues();
 
-        if (_score == 4)
-            SpawnKeys();
+        if (_taps > 4)
+        {
+            score++;
+            UpdateScore();
+        }
+        
+        if (highScore < score)
+        {
+            highScore = score;
+            UpdateHighScore();
+        }
+        
+        if (_taps == 4)
+            StartCoroutine(SpawnKeys());
     }
 
     public void FailedTap()
     {
-        level -= Convert.ToInt32(resetBy / speedIncreasedBy);
-        level = Math.Max(0, level);
-        UpdateLevel();
+        score--;
+        score = Math.Max(0, score);
+        UpdateScore();
         
-        _speed -= resetBy;
-        _speed = Math.Max(minSpeed, _speed);
-        
-        _currMaxDelay += resetBy;
-        _currMaxDelay = Math.Min(maxDelay, _currMaxDelay);
-        
-        _currMinDelay += resetBy;
-        _currMinDelay = Math.Min(startMinDelay, _currMinDelay);
+        SetValues();
 
         var keys = GameObject.FindGameObjectsWithTag("Key");
         foreach (var key in keys)
         {
-            key.GetComponent<KeyBehavior>().SetSpeed(_speed);
+            key.GetComponent<KeyBehavior>().SetSpeed(_currSpeed);
         }
     }
 
     public void RestartGame(int delay)
     {
-        if(_score == 0) return;
-        
-        playTime = 0;
-        level = 0;
+        if(_taps == 0) return;
 
         var keys = GameObject.FindGameObjectsWithTag("Key");
         foreach (var key in keys)
@@ -95,33 +96,21 @@ public class PianoTilesManager : MonoBehaviour
         ResetAll(delay);
     }
 
-    private async Task SpawnKeys()
+    private IEnumerator SpawnKeys()
     {
-        while (_score > 3)
+        while (_taps > 3)
         {
-            level++;
-            UpdateLevel();
-            
-            _delay = Random.Range(_currMinDelay, _currMaxDelay);
+            var currDelay = Random.Range(_currMinDelay, _currMaxDelay);
 
             var spawnPos = Random.Range(0, spawnPoints.Count);
             var randomSpawnPoint = spawnPoints[spawnPos];
 
             var keyObject = Instantiate(key, randomSpawnPoint.position, randomSpawnPoint.rotation, randomSpawnPoint);
             var keyBehavior = keyObject.GetComponent<KeyBehavior>();
-            keyBehavior.SetSpeed(_speed);
+            keyBehavior.SetSpeed(_currSpeed);
             keyBehavior.SetSound(spawnPos);
 
-            if (_speed <= maxSpeed)
-                _speed += speedIncreasedBy;
-
-            if (_currMinDelay >= minDelay)
-            {
-                _currMaxDelay -= speedIncreasedBy;
-                _currMinDelay -= speedIncreasedBy;
-            }
-            
-            await Task.Delay(Convert.ToInt32(_delay * 1000));
+            yield return new WaitForSeconds(currDelay);
         }
     }
 
@@ -129,10 +118,13 @@ public class PianoTilesManager : MonoBehaviour
     {
         await Task.Delay(delay);
 
-        _score = 0;
-        _currMaxDelay = maxDelay;
+        _taps = 0;
+        playTime = 0;
+        score = 0;
+        UpdateScore();
+        _currMaxDelay = startMaxDelay;
         _currMinDelay = startMinDelay;
-        _speed = minSpeed;
+        _currSpeed = startSpeed;
 
         for (var i = 0; i < spawnPoints.Count; i++)
         {
@@ -145,8 +137,23 @@ public class PianoTilesManager : MonoBehaviour
         }
     }
 
-    private void UpdateLevel()
+    private void SetValues()
     {
-        levelText.text = level.ToString();
+        _currSpeed = startSpeed + (score * increasedBy);
+        _currMaxDelay = startMaxDelay - (score * increasedBy);
+        _currMinDelay = startMinDelay -  (score * increasedBy);
+        _currSpeed = Math.Min(_currSpeed, 3.8f);
+        _currMaxDelay = Math.Max(_currMaxDelay, .7f);
+        _currMinDelay = Math.Max(_currMinDelay, .2f);
+    }
+
+    private void UpdateScore()
+    {
+        scoreText.text = score.ToString();
+    }
+    
+    private void UpdateHighScore()
+    {
+        highScoreText.text = highScore.ToString();
     }
 }
