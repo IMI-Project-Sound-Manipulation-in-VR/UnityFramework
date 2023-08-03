@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class MiniGameManager : MonoBehaviour
 {
+    public static event Action OnNotifyMiniGameChange;
+
     [SerializeField] 
     private MiniGame startMiniGame;
     
@@ -59,6 +61,7 @@ public class MiniGameManager : MonoBehaviour
             case MiniGame.MazeGame: EnablePianoTiles(); break;
             case MiniGame.PianoTiles: EnableTowerOfHanoi(); break;
         }
+        OnNotifyMiniGameChange?.Invoke();
     }
     
     private void SwitchToPreviousGame()
@@ -69,6 +72,7 @@ public class MiniGameManager : MonoBehaviour
             case MiniGame.MazeGame: EnableTowerOfHanoi(); break;
             case MiniGame.PianoTiles: EnableMazeGame(); break;
         }
+        OnNotifyMiniGameChange?.Invoke();
     }
 
     private void EnableTowerOfHanoi()

@@ -12,7 +12,8 @@ public class HRConnector : MonoBehaviour
 
     private void Awake()
     {
-        HeartBeatWindow.OnNotifyHeartBeat += CountUp;
+        HeartBeat.OnNotifyHeartBeat += CountUp;
+        MiniGameManager.OnNotifyMiniGameChange += ResetGraph;
     }
     
     private void CountUp(DateTime time, int value)
@@ -31,6 +32,12 @@ public class HRConnector : MonoBehaviour
         newData[data.Length] = value;
 
         _graph.data = newData;
+    }
+
+    private void ResetGraph()
+    {
+        Debug.Log("bruh");
+        _graph.data = new int[0];
     }
 
     private void AdjustStressManipulator(int value)
