@@ -15,6 +15,7 @@ public class SoundTest : MonoBehaviour
     public float Pitch { get { return pitch; } set { pitch = value; } }
 
     public bool isColliding = false;
+    
     private float marbleRollSpeed;
     public float MarbleRollSpeed { get { return marbleRollSpeed; } set { marbleRollSpeed = value; }}
 

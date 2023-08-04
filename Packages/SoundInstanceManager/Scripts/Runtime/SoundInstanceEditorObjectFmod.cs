@@ -208,7 +208,7 @@ public class SoundInstanceEditorObjectFmod : SoundInstanceEditorObject
             // check if the script has a field with the same property name
             // this is optional. if the property doesnt exists, the external script will not controll the property
             // and so only manual mainpulation through the inspector will work
-            PropertyInfo p = editor.reflectionScriptType != null ? editor.reflectionScriptType.GetProperty(property.propertyName, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase) : null;
+            PropertyInfo p = editor.ReflectionScriptType != null ? editor.ReflectionScriptType.GetProperty(property.propertyName, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase) : null;
             if(p != null) editor.ReflectionScriptProperties[i] = p;
         }
     }

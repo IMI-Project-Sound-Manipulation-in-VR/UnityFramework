@@ -165,6 +165,16 @@ public class SoundInstanceManager : MonoBehaviour
             soundInstanceTagFoldouts = new bool[newSoundInstances.Length];
         }
     }
+
+    public void InitSoundInstances()
+    {
+        // Set manager level and update inspector for each sound instance
+        foreach(SoundInstanceEditor soundInstance in soundInstances)
+        {
+            soundInstance.InitEditorObject();
+            soundInstance.LoadEditorPrefs();
+        }
+    }
 }
 
 [CustomEditor(typeof(SoundInstanceManager))]
@@ -175,6 +185,9 @@ public class SoundInstanceManagerEditor : UnityEditor.Editor
     private void OnEnable()
     {
         SoundInstanceManager = (SoundInstanceManager)target;
+        
+        SoundInstanceManager.UpdateSoundInstances();
+        SoundInstanceManager.InitSoundInstances();
     }
 
     public override void OnInspectorGUI()

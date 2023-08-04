@@ -36,7 +36,6 @@ public class HRConnector : MonoBehaviour
 
     private void ResetGraph()
     {
-        Debug.Log("bruh");
         _graph.data = new int[0];
     }
 

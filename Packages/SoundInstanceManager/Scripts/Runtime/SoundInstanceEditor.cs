@@ -94,11 +94,11 @@ public class SoundInstanceEditor : MonoBehaviour
     // Editor Level
     private float editorLevel;
     private bool editorLevelActive;
-    private PropertyInfo editorLevelProperty;
+    private readonly PropertyInfo editorLevelProperty;
 
     // Reflection external script
     [SerializeField] private MonoBehaviour reflectionScript;
-    public Type reflectionScriptType { get; private set; }
+    public Type ReflectionScriptType { get; private set; }
     public PropertyInfo[] ReflectionScriptProperties { get; set; }
     private bool reflectionScriptActive;
 
@@ -111,7 +111,25 @@ public class SoundInstanceEditor : MonoBehaviour
     void Start()
     {
         LoadReflectionScript();
-        InitializeEditorObject();
+        SetupEditorObject();
+        LoadEditorPrefs();
+    }
+
+    public void LoadEditorPrefs()
+    {
+        string key = $"soundInstanceTagIndex_{this.GetInstanceID()}";
+        soundInstanceTagIndex = EditorPrefs.GetInt(key, soundInstanceTagIndex);
+        soundInstanceTag = SoundInstanceTagManager.Instance.GetSoundInstanceTags()[soundInstanceTagIndex];
+
+        if(soundInstanceEditorObject != null)
+        {
+            if(soundInstanceEditorObject.EditorType == SoundInstanceEditorType.Unity)
+            {
+                string selectedPropertyPresetIndexKey = $"SelectedPropertyPresetIndex_{this.GetInstanceID()}";
+                soundInstanceEditorObject.SelectedPropertyPresetIndex = EditorPrefs.GetInt(selectedPropertyPresetIndexKey, soundInstanceEditorObject.SelectedPropertyPresetIndex);
+            }
+        }
+
     }
 
     // Update is called once per frame
@@ -312,7 +330,7 @@ public class SoundInstanceEditor : MonoBehaviour
                 SoundInstanceEditorAudioProperty property = soundInstanceEditorObject.AudioProperties[i];
 
                 // Generate the foldout name for the current property
-                string foldoutName =  char.ToUpper(property.propertyName[0]) + property.propertyName.Substring(1);
+                string foldoutName =  char.ToUpper(property.propertyName[0]) + property.propertyName[1..];
                 if(property.propertyControlType != SoundInstanceEditorAudioPropertyControlType.None) { foldoutName += "(" + property.propertyControlType.ToString() + ")"; }
 
                 GUILayout.BeginVertical(EditorStyles.helpBox);
@@ -450,6 +468,9 @@ public class SoundInstanceEditor : MonoBehaviour
         // Display the dropdown for selecting a preset, showing the currently selected preset
         soundInstanceEditorObject.SelectedPropertyPresetIndex = EditorGUILayout.Popup("Presets", soundInstanceEditorObject.SelectedPropertyPresetIndex, audioSourcePropertiesPresetsStrings);
 
+        string key = $"SelectedPropertyPresetIndex_{this.GetInstanceID()}";
+        EditorPrefs.SetInt(key, soundInstanceEditorObject.SelectedPropertyPresetIndex);
+
         // Check if the selected preset index has changed
         if (soundInstanceEditorObject.SelectedPropertyPresetIndex != soundInstanceEditorObject.PreviousPropertyPresetIndex)
         {
@@ -492,6 +513,9 @@ public class SoundInstanceEditor : MonoBehaviour
             // Set the selected SoundInstanceTag based on the index
             soundInstanceTag = tags[soundInstanceTagIndex];
         }
+
+        string key = $"soundInstanceTagIndex_{this.GetInstanceID()}";
+        EditorPrefs.SetInt(key, soundInstanceTagIndex);
     }
 
    private void DrawInspectorGUIEditorLevel()
@@ -555,7 +579,7 @@ public class SoundInstanceEditor : MonoBehaviour
     }
 
     private void LoadReflectionScript(){
-        reflectionScriptType = reflectionScript ? reflectionScript.GetType() : null;
+        ReflectionScriptType = reflectionScript ? reflectionScript.GetType() : null;
     }
 
     // Private
@@ -611,7 +635,7 @@ public class SoundInstanceEditor : MonoBehaviour
             PropertyInfo reflectionAudioProperty = ReflectionScriptProperties[index];
 
             // Get the reflection script property (if available)
-            PropertyInfo reflectionScriptProperty = ReflectionScriptProperties != null ? ReflectionScriptProperties[index] : null;
+            PropertyInfo reflectionScriptProperty = ReflectionScriptProperties?[index];
             
             // Initialize input value
             float inputValue = property.inputValue;
@@ -654,20 +678,20 @@ public class SoundInstanceEditor : MonoBehaviour
                     // Update input value and calculate output value linearly
                     property.inputValue = inputValue;
                     property.outputValue = property.minValue + (property.maxValue - property.minValue) * inputValue;
-                    property.minValue = property.defaultMinValue;
-                    property.maxValue = property.defaultMaxValue;
+                    // property.minValue = property.defaultMinValue;
+                    // property.maxValue = property.defaultMaxValue;
                     break;
                 case SoundInstanceEditorAudioPropertyEvaluationType.Level:
                     property.inputValue = inputValue;
                     property.outputValue = inputValue >= property.level.x && inputValue <= property.level.y ? 1 : 0;
-                    property.minValue = property.defaultMinValue;
-                    property.maxValue = property.defaultMaxValue;
+                    // property.minValue = property.defaultMinValue;
+                    // property.maxValue = property.defaultMaxValue;
                     break;
                 case SoundInstanceEditorAudioPropertyEvaluationType.Labeled:
                     property.inputValue = inputValue;
                     property.outputValue = Mathf.RoundToInt(Mathf.Lerp(property.minValue, property.maxValue, inputValue));
-                    property.minValue = property.defaultMinValue;
-                    property.maxValue = property.defaultMaxValue;
+                    // property.minValue = property.defaultMinValue;
+                    // property.maxValue = property.defaultMaxValue;
                     break;
             }
 
@@ -697,18 +721,19 @@ public class SoundInstanceEditor : MonoBehaviour
         }
     }
 
-    private void InitializeEditorObject()
+    public void InitEditorObject()
     {
-        ResetSoundInstanceEditor();
         switch (editorType)
         {
             case SoundInstanceEditorType.Unity:
+                // Create a Unity-based sound instance editor object if an audio clip is available
                 if(audioClipReference != null && soundInstanceEditorObject == null)
                 {
                     soundInstanceEditorObject = new SoundInstanceEditorObjectUnity(this);
                 }
                 break;
             case SoundInstanceEditorType.Fmod:
+                // Create an FMOD-based sound instance editor object if an FMOD event is available
                 if(!fmodEventReference.Guid.IsNull && soundInstanceEditorObject == null){
                     soundInstanceEditorObject = new SoundInstanceEditorObjectFmod(this);
                 }
@@ -734,6 +759,9 @@ public class SoundInstanceEditor : MonoBehaviour
             eventReferenceProperty = serializedObject.FindProperty("fmodEventReference");
             audioClipProperty = serializedObject.FindProperty("audioClipReference");
             reflectionScriptProperty = serializedObject.FindProperty("reflectionScript");
+
+            SoundInstanceEditor.InitEditorObject();
+            SoundInstanceEditor.LoadEditorPrefs();
         }
 
         public override void OnInspectorGUI()
