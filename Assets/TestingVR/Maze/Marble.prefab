@@ -17,7 +17,8 @@ GameObject:
   - component: {fileID: 9109129234564188856}
   - component: {fileID: 6776627511870757573}
   - component: {fileID: 2017748521}
-  - component: {fileID: 2017748522}
+  - component: {fileID: 908234325966365629}
+  - component: {fileID: 583336454}
   m_Layer: 0
   m_Name: Marble
   m_TagString: Untagged
@@ -294,9 +295,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   innerMaze: {fileID: 0}
+  outerMaze: {fileID: 0}
   isColliding: 0
-  marbleRollSpeed: 0
---- !u!114 &2017748522
+--- !u!114 &908234325966365629
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,14 +306,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 6776627511870757629}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb9e55031402d5e4ab02141adcc7d447, type: 3}
+  m_Script: {fileID: 11500000, guid: 832b9c8dacfb700448ee9d3b574073b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 2017748521}
-  eventReference:
+  validColliders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &583336454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776627511870757629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554a76e9296a58a4a9d56364c6759c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorType: 1
+  audioClipReference: {fileID: 0}
+  fmodEventReference:
     Guid:
       Data1: 1518175522
       Data2: 1220172992
       Data3: -1459838052
       Data4: -472731183
     Path: event:/Marble/MarbleOnWood
+  reflectionScript: {fileID: 2017748521}
