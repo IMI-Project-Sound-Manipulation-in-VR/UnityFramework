@@ -94,20 +94,9 @@ public class HeartBeatWindow : EditorWindow
         GUILayout.Label(_heartBeatValue, EditorStyles.boldLabel);
     }
 
-    private void Update()
-    {
-        if (EditorApplication.isPlaying)
-        {
-            UpdateBluetooth();
-        }
-    }
-
     private void OnInspectorUpdate()
     {
-        if (!EditorApplication.isPlaying)
-        {
-            UpdateBluetooth();
-        }
+        UpdateBluetooth();
         Repaint();
     }
 

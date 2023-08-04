@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0901e3e-e881-458c-a3ce-b7e9eb56e792" name="Changes" comment="Hanoi glitch fix,&#10;Hanoi bug fix,&#10;Hanoi lose slice fix">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR_Sample/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/HVRConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/HRConnector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/HVRConnector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/HRConnector.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeartBeat/HeartBeatWIndow/HeartBeat.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeartBeat/HeartBeatWIndow/HeartBeat.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeartBeat/HeartBeatWIndow/HeartBeatWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HeartBeat/HeartBeatWIndow/HeartBeatWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TestingVR/HRConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TestingVR/HRConnector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +32,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/afb51423a29947c09a21689e8d96b70a1a000/e8/439da29f/RigidbodyConstraints.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/HeartBeat/HeartBeatWIndow/HeartBeat.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/HeartBeat/HeartBeatWIndow/HeartBeat.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/HeartBeat/HeartBeatWIndow/HeartBeat.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/HeartBeat/HeartBeatWIndow/HeartBeatWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/HeartBeat/HeartBeatWIndow/HeartBeatWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/SoundTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/SoundTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/HRConnector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/HRConnector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/HRConnector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/HRConnector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/HRConnector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/HRConnector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/Main.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/Main.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/Main.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/Main.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/Main.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/Maze/Marble.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Showtime2023/VR_Sample/Assets/TestingVR/Maze/Marble.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TestingVR/Tower of Hanoi/RodCanvasDebug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.1/Runtime/Interaction/Interactors/XRInteractionGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.oculus@3.3.0/Runtime/OculusLoader.cs" root0="SKIP_HIGHLIGHTING" />
@@ -46,19 +73,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "rider.run.widget.enabled.cache": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.23f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.24f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;E:\Projekte Unity\Git\VR_Sample&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\Projekte Unity\Git\VR_Sample" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -66,7 +94,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.23f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.24f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;E:\Projekte Unity\Git\VR_Sample&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\Projekte Unity\Git\VR_Sample" />
       <option name="PASS_PARENT_ENVS" value="1" />

@@ -12,7 +12,7 @@ public class HRConnector : MonoBehaviour
 
     private void Awake()
     {
-        HeartBeat.OnNotifyHeartBeat += CountUp;
+        HeartBeatWindow.OnNotifyHeartBeat += CountUp;
         MiniGameManager.OnNotifyMiniGameChange += ResetGraph;
     }
     
