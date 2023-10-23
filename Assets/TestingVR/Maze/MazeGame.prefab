@@ -423,7 +423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c40adb33b3a3c744868e4260ad49553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationBorder: 40
 --- !u!1 &2885069309092182923
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c40adb33b3a3c744868e4260ad49553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationBorder: 40
 --- !u!1 &2885069309580810917
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,7 +930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2885069309608814417
 Transform:
   m_ObjectHideFlags: 0
@@ -1487,6 +1485,17 @@ PrefabInstance:
       objectReference: {fileID: 2885069309095259589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
+--- !u!114 &2885069310168246694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2017748521, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
+  m_PrefabInstance: {fileID: 2885069308150534031}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503563080536675698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168d61edbe9ac0b49a0ff2855773593d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8503563080536675661 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6776627511870757570, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
@@ -1497,6 +1506,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6776627511870757629, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
   m_PrefabInstance: {fileID: 2885069308150534031}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &330023576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503563080536675698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554a76e9296a58a4a9d56364c6759c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorType: 1
+  audioClipReference: {fileID: 0}
+  fmodEventReference:
+    Guid:
+      Data1: 1518175522
+      Data2: 1220172992
+      Data3: -1459838052
+      Data4: -472731183
+    Path: event:/Marble/MarbleOnWood
+  reflectionScript: {fileID: 2885069310168246694}
 --- !u!1001 &2885069308330536490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1598,11 +1629,44 @@ PrefabInstance:
       objectReference: {fileID: 2885069309095259589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
+--- !u!114 &2885069310070884355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2017748521, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
+  m_PrefabInstance: {fileID: 2885069308330536490}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503563080718775511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168d61edbe9ac0b49a0ff2855773593d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8503563080718775511 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6776627511870757629, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
   m_PrefabInstance: {fileID: 2885069308330536490}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &232321280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503563080718775511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554a76e9296a58a4a9d56364c6759c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorType: 1
+  audioClipReference: {fileID: 0}
+  fmodEventReference:
+    Guid:
+      Data1: 1518175522
+      Data2: 1220172992
+      Data3: -1459838052
+      Data4: -472731183
+    Path: event:/Marble/MarbleOnWood
+  reflectionScript: {fileID: 2885069310070884355}
 --- !u!4 &8503563080718775528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6776627511870757570, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
@@ -1711,3 +1775,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6776627511870757629, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
   m_PrefabInstance: {fileID: 8503563079866607618}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1669893929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885069309625856767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554a76e9296a58a4a9d56364c6759c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorType: 1
+  audioClipReference: {fileID: 0}
+  fmodEventReference:
+    Guid:
+      Data1: 1518175522
+      Data2: 1220172992
+      Data3: -1459838052
+      Data4: -472731183
+    Path: event:/Marble/MarbleOnWood
+  reflectionScript: {fileID: 8503563080005258795}
+--- !u!114 &8503563080005258795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2017748521, guid: f315bd48f96864248940f28dddf26fe9, type: 3}
+  m_PrefabInstance: {fileID: 8503563079866607618}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885069309625856767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168d61edbe9ac0b49a0ff2855773593d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

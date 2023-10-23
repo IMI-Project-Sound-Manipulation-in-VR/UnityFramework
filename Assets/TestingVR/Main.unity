@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &34672114 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 92552270374612436, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
-  m_PrefabInstance: {fileID: 1212084049}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &146352224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -185,87 +180,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b3a2b6cdde723f489f9b7d1972b0065, type: 3}
---- !u!1 &186303494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1601021911403127343, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-  m_PrefabInstance: {fileID: 583336444}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &232321270 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8503563080718775511, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-  m_PrefabInstance: {fileID: 583336444}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &232321271 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2885069310070884355, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-  m_PrefabInstance: {fileID: 583336444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232321270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168d61edbe9ac0b49a0ff2855773593d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &232321280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232321270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 554a76e9296a58a4a9d56364c6759c94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  editorType: 1
-  audioClipReference: {fileID: 0}
-  fmodEventReference:
-    Guid:
-      Data1: 1518175522
-      Data2: 1220172992
-      Data3: -1459838052
-      Data4: -472731183
-    Path: event:/Marble/MarbleOnWood
-  reflectionScript: {fileID: 232321271}
---- !u!1 &330023566 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8503563080536675698, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-  m_PrefabInstance: {fileID: 583336444}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &330023567 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2885069310168246694, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-  m_PrefabInstance: {fileID: 583336444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330023566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168d61edbe9ac0b49a0ff2855773593d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &330023576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330023566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 554a76e9296a58a4a9d56364c6759c94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  editorType: 1
-  audioClipReference: {fileID: 0}
-  fmodEventReference:
-    Guid:
-      Data1: 1518175522
-      Data2: 1220172992
-      Data3: -1459838052
-      Data4: -472731183
-    Path: event:/Marble/MarbleOnWood
-  reflectionScript: {fileID: 330023567}
 --- !u!1001 &349068152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -315,50 +229,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b71e387166e4ce648849bbd6b762b736, type: 3}
---- !u!1 &439410645
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 439410647}
-  - component: {fileID: 439410646}
-  m_Layer: 0
-  m_Name: HeartBeat
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &439410646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439410645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb977e4095ae211409fba11d3b8ebafc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &439410647
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439410645}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &470286903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4556984811349870, guid: b71e387166e4ce648849bbd6b762b736, type: 3}
@@ -374,10 +244,6 @@ PrefabInstance:
     - target: {fileID: 2885069309608814416, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
       propertyPath: m_Name
       value: MazeGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 2885069309608814416, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2885069309608814417, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
       propertyPath: m_RootOrder
@@ -423,44 +289,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2885069310070884355, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-      propertyPath: outerMaze
-      value: 
-      objectReference: {fileID: 186303494}
-    - target: {fileID: 2885069310168246694, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-      propertyPath: outerMaze
-      value: 
-      objectReference: {fileID: 186303494}
-    - target: {fileID: 8503563080005258795, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-      propertyPath: outerMaze
-      value: 
-      objectReference: {fileID: 186303494}
-    m_RemovedComponents:
-    - {fileID: 8503563080005258792, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-    - {fileID: 2885069310168246693, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-    - {fileID: 2885069310070884352, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
 --- !u!1 &583336445 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2885069309608814416, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
   m_PrefabInstance: {fileID: 583336444}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &583336450 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2885069309625856767, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-  m_PrefabInstance: {fileID: 583336444}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &583336451 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8503563080005258795, guid: 0e86fa7a021101f41921203fc08c8362, type: 3}
-  m_PrefabInstance: {fileID: 583336444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583336450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168d61edbe9ac0b49a0ff2855773593d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &590969471
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,21 +682,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1029881687, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
-      propertyPath: _soundInstanceManager
-      value: 
-      objectReference: {fileID: 1854038963}
     - target: {fileID: 92552270374612436, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
       propertyPath: m_Name
       value: Sound Instance Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 92552270374612437, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
-      propertyPath: soundInstancesFmod.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 92552270374612437, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
-      propertyPath: soundInstancesFmod.Array.data[1]
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 92552270374612438, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
       propertyPath: m_RootOrder
@@ -905,10 +728,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 92552270374612438, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 92552270374612439, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1016,59 +835,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1669893929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 583336450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 554a76e9296a58a4a9d56364c6759c94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  editorType: 1
-  audioClipReference: {fileID: 0}
-  fmodEventReference:
-    Guid:
-      Data1: 1518175522
-      Data2: 1220172992
-      Data3: -1459838052
-      Data4: -472731183
-    Path: event:/Marble/MarbleOnWood
-  reflectionScript: {fileID: 583336451}
 --- !u!4 &1814410633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4556984811349870, guid: b71e387166e4ce648849bbd6b762b736, type: 3}
   m_PrefabInstance: {fileID: 1250910519}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1854038963 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 92552270374612437, guid: 2508c68ab5b9c374fad351f3cf5f51d6, type: 3}
-  m_PrefabInstance: {fileID: 1212084049}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34672114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eb37d373a9ad5f469b2a4c91af958f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1854038966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34672114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d012322a2c4b08e43880a22eece9a3ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _graph:
-    data: 
-  _soundInstanceManager: {fileID: 1854038963}
 --- !u!1001 &2073667450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1123,10 +894,6 @@ PrefabInstance:
     - target: {fileID: 6260700339525053149, guid: 83eab675546aaaf42a81ee904b37b0b0, type: 3}
       propertyPath: m_Name
       value: Tower of Hanoi
-      objectReference: {fileID: 0}
-    - target: {fileID: 6260700339525053149, guid: 83eab675546aaaf42a81ee904b37b0b0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83eab675546aaaf42a81ee904b37b0b0, type: 3}

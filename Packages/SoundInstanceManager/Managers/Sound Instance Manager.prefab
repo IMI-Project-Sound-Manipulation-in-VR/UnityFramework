@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 92552270374612438}
   - component: {fileID: 92552270374612439}
   - component: {fileID: 92552270374612437}
+  - component: {fileID: 1854038966}
   m_Layer: 0
   m_Name: Sound Instance Manager
   m_TagString: Untagged
@@ -40,7 +41,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92552270374612436}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14a96f58bd2ceef4390c10be736be5dc, type: 3}
   m_Name: 
@@ -58,7 +59,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb37d373a9ad5f469b2a4c91af958f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundInstancesUnity:
-  - {fileID: 0}
-  soundInstancesFmod: []
-  script: {fileID: 0}
+--- !u!114 &1854038966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92552270374612436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012322a2c4b08e43880a22eece9a3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _graph:
+    data: 
+  _soundInstanceManager: {fileID: 92552270374612437}

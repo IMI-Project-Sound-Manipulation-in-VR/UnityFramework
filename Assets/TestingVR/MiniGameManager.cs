@@ -33,6 +33,7 @@ public class MiniGameManager : MonoBehaviour
         _mazeGameManager = mazeGame.GetComponent<MazeGameManager>();
         _pianoTilesManager = pianoTiles.GetComponent<PianoTilesManager>();
 
+        // Enable the one which ist chosen in startMiniGame
         switch (startMiniGame)
         {
             case MiniGame.TowerOfHanoi: EnableTowerOfHanoi(); break;
@@ -43,6 +44,7 @@ public class MiniGameManager : MonoBehaviour
 
     private void Update()
     {
+        // Use Arrow Keys to switch between the minigames
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             SwitchToNextGame();
@@ -53,6 +55,7 @@ public class MiniGameManager : MonoBehaviour
         }
     }
 
+    // Enables the next minigame from the current minigame (order: Tower of Hanoi -> Maze Game -> Piano Tiles -> Tower of Hanoi)
     private void SwitchToNextGame()
     {
         switch (_currentMiniGame)
@@ -64,6 +67,7 @@ public class MiniGameManager : MonoBehaviour
         OnNotifyMiniGameChange?.Invoke();
     }
     
+    // Enables the previous minigame from the current minigame (order: Tower of Hanoi -> Piano Tiles -> Maze Game -> Tower of Hanoi)
     private void SwitchToPreviousGame()
     {
         switch (_currentMiniGame)
@@ -75,6 +79,7 @@ public class MiniGameManager : MonoBehaviour
         OnNotifyMiniGameChange?.Invoke();
     }
 
+    // Enables Tower of Hanoi minigame by activating it and deactivation the others
     private void EnableTowerOfHanoi()
     {
         _currentMiniGame = MiniGame.TowerOfHanoi;
@@ -83,9 +88,11 @@ public class MiniGameManager : MonoBehaviour
         mazeGame.SetActive(false);
         pianoTiles.SetActive(false);
         
+        // Starts the game
         _towerOfHanoiManager.SpawnSlices();
     }
 
+    // Enables maze minigame by activating it and deactivation the others
     private void EnableMazeGame()
     {
         _currentMiniGame = MiniGame.MazeGame;
@@ -94,9 +101,11 @@ public class MiniGameManager : MonoBehaviour
         mazeGame.SetActive(true);
         pianoTiles.SetActive(false);
         
+        // Starts the game
         _mazeGameManager.ResetGame();
     }
 
+    // Enables piano tiles minigame by activating it and deactivation the others
     private void EnablePianoTiles()
     {
         _currentMiniGame = MiniGame.PianoTiles;
@@ -105,10 +114,12 @@ public class MiniGameManager : MonoBehaviour
         mazeGame.SetActive(false);
         pianoTiles.SetActive(true);
         
+        // Starts the game
         _pianoTilesManager.RestartGame(0);
     }
 }
 
+// Enum for the three minigame Types
 internal enum MiniGame
 {
     TowerOfHanoi,
